@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>NS-31 Recap Consumo</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "surface-container-low": "#1b1b20",
+                        "secondary": "#4cd7f6",
+                        "on-error": "#690005",
+                        "surface-tint": "#d2bbff",
+                        "on-primary-fixed": "#25005a",
+                        "on-surface-variant": "#ccc3d8",
+                        "on-tertiary-fixed-variant": "#8c0053",
+                        "secondary-fixed-dim": "#4cd7f6",
+                        "tertiary-fixed-dim": "#ffb0cd",
+                        "surface-variant": "#35343a",
+                        "surface-container-high": "#2a292f",
+                        "primary": "#d2bbff",
+                        "on-secondary-fixed-variant": "#004e5c",
+                        "tertiary-container": "#bf2076",
+                        "surface": "#131318",
+                        "on-secondary": "#003640",
+                        "surface-dim": "#131318",
+                        "inverse-on-surface": "#303036",
+                        "secondary-fixed": "#acedff",
+                        "on-surface": "#e4e1e9",
+                        "on-primary": "#3f008e",
+                        "inverse-primary": "#732ee4",
+                        "on-tertiary": "#640039",
+                        "on-error-container": "#ffdad6",
+                        "on-secondary-fixed": "#001f26",
+                        "surface-container-highest": "#35343a",
+                        "primary-fixed": "#eaddff",
+                        "on-tertiary-fixed": "#3e0022",
+                        "primary-fixed-dim": "#d2bbff",
+                        "on-primary-fixed-variant": "#5a00c6",
+                        "on-background": "#e4e1e9",
+                        "on-primary-container": "#ede0ff",
+                        "outline-variant": "#4a4455",
+                        "error": "#ffb4ab",
+                        "on-tertiary-container": "#ffdde7",
+                        "surface-container-lowest": "#0e0e13",
+                        "surface-container": "#1f1f25",
+                        "secondary-container": "#03b5d3",
+                        "tertiary": "#ffb0cd",
+                        "surface-bright": "#39383e",
+                        "primary-container": "#7c3aed",
+                        "inverse-surface": "#e4e1e9",
+                        "outline": "#958da1",
+                        "on-secondary-container": "#00424e",
+                        "background": "#131318",
+                        "tertiary-fixed": "#ffd9e4",
+                        "error-container": "#93000a"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    spacing: {
+                        "section-margin": "32px",
+                        "container-padding-h": "20px",
+                        "inline-md": "16px",
+                        "inline-sm": "8px",
+                        "card-gap": "12px"
+                    },
+                    fontFamily: {
+                        "headline-md": ["Sora"],
+                        "display-hero": ["Sora"],
+                        "data-mono": ["Geist Mono"],
+                        "body-md": ["Hanken Grotesk"],
+                        "headline-lg": ["Sora"],
+                        "caption-caps": ["Hanken Grotesk"],
+                        "body-lg": ["Hanken Grotesk"]
+                    },
+                    fontSize: {
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "700" }],
+                        "display-hero": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "data-mono": ["14px", { "lineHeight": "20px", "fontWeight": "500" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "500" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "700" }],
+                        "caption-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "600" }]
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'float-delayed': 'float 6s ease-in-out 3s infinite',
+                        'pulse-glow': 'pulse-glow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite'
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        },
+                        'pulse-glow': {
+                            '0%, 100%': { opacity: 1, filter: 'drop-shadow(0 0 12px rgba(210,187,255,0.6))' },
+                            '50%': { opacity: .8, filter: 'drop-shadow(0 0 24px rgba(210,187,255,0.9))' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        @import url('https://fonts.googleapis.com/css2?family=Sora:wght@700;800&family=Hanken+Grotesk:wght@500;600;700&family=Geist+Mono:wght@500&display=swap');
+        
+        body {
+            background-color: #131318; /* surface */
+            color: #e4e1e9; /* on-surface */
+            margin: 0;
+            overflow: hidden; /* Lock scroll for story view */
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .glass-panel {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            background-color: rgba(19, 19, 26, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .text-gradient-primary {
+            background: linear-gradient(135deg, #d2bbff 0%, #ffb0cd 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="h-[884px] w-full relative flex flex-col">
+<!-- Immersive Background -->
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full bg-cover bg-center opacity-40 mix-blend-screen" data-alt="A highly stylized, immersive background depicting a premium dark nightclub atmosphere merged with futuristic 3D elements. Floating, luminescent 3D icons of elegant cocktails and craft beers drift softly through the scene. The lighting is dominated by deep neon violet and fuchsia hues, contrasting against a pitch-black minimalist canvas. Glassmorphism effects and subtle volumetric fog create a sense of deep, energetic space without distracting from foreground UI elements." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBEmkkPA10wx4MqdtBfbYZpfV0J2NE-GGxb_UcdqZVFXhczOdXl59DOTxCJfuOSK9-b3JmrTlc-fJA1A40QmEf7fUZ9BmqQzHxETR3VjjnlpnZNb90mjG-HxIpNLGbIgTyl2QlNVoRaOVMzcvDhBghSz4P-NWbe7BeuBdh-GuYwKYv7N1NQyE4nuANndiTl6x5CpY8X1Bxj7Ol3QkQ_Kq9JLUQk_REYa1yCFYYpyOmpdzk1ISIEmCePUbiHw_MvK50ts7UmCHKEcqY');">
+</div>
+<!-- Gradient overlays for depth and text legibility -->
+<div class="absolute inset-0 bg-gradient-to-b from-surface/20 via-surface/60 to-surface z-0"></div>
+<div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/10 via-background/80 to-background z-0"></div>
+</div>
+<!-- Top Overlay Layer: Story Progress & Navigation -->
+<div class="relative z-50 w-full flex flex-col pt-4 gap-2">
+<!-- Story Progress Bar -->
+<div class="flex gap-2 px-container-padding-h w-full">
+<div class="h-1 flex-1 bg-primary rounded-full shadow-[0_0_12px_rgba(210,187,255,0.8)]"></div>
+<div class="h-1 flex-1 bg-primary rounded-full shadow-[0_0_12px_rgba(210,187,255,0.8)]"></div>
+<div class="h-1 flex-1 bg-surface-variant/40 rounded-full"></div>
+<div class="h-1 flex-1 bg-surface-variant/40 rounded-full"></div>
+</div>
+<!-- TopAppBar (from Shared Components JSON) -->
+<div class="flex justify-between items-center px-container-padding-h h-16 bg-transparent">
+<!-- Leading Icon -->
+<button class="text-primary hover:opacity-80 transition-opacity scale-95 active:scale-90 transition-transform p-2 -ml-2 rounded-full bg-surface/20 backdrop-blur-md border border-white/5">
+<span class="material-symbols-outlined font-headline-md text-headline-md block">close</span>
+</button>
+<!-- Empty Headline per JSON -->
+<div class=""></div>
+<!-- Trailing Icon Removed -->
+</div>
+</div>
+<!-- Main Content Canvas -->
+<main class="relative z-10 flex-1 flex flex-col justify-center items-center px-container-padding-h pb-section-margin overflow-y-auto">
+<!-- Floating Accent Graphic -->
+<div class="mb-8 relative animate-float">
+<div class="absolute inset-0 bg-primary/20 blur-[40px] rounded-full"></div>
+<span class="material-symbols-outlined text-[72px] text-primary animate-pulse-glow" style="font-variation-settings: 'FILL' 1;">liquor</span>
+</div>
+<!-- Central Glass Card -->
+<div class="glass-panel rounded-[32px] p-8 w-full max-w-[400px] flex flex-col items-center shadow-[0_24px_48px_-12px_rgba(0,0,0,0.5)]">
+<!-- Title Section -->
+<div class="text-center mb-8">
+<p class="font-body-md text-body-md text-on-surface-variant uppercase tracking-[0.2em] mb-2 opacity-80">Rendimiento Mensual</p>
+<h1 class="font-display-hero text-display-hero leading-tight text-gradient-primary drop-shadow-[0_0_16px_rgba(210,187,255,0.3)]">
+                    Eres un<br/>Coctelería Expert
+                </h1>
+</div>
+<!-- Stats Container (Bento Style) -->
+<div class="w-full flex flex-col gap-card-gap">
+<!-- Stat Item 1: Copas -->
+<div class="glass-panel rounded-2xl p-4 flex items-center justify-between group hover:bg-white/[0.05] transition-colors"><div class="flex items-center gap-4"><div class="w-12 h-12 flex-shrink-0 rounded-full bg-primary/10 flex items-center justify-center border border-primary/20"><span class="material-symbols-outlined text-primary text-[24px]">local_bar</span></div><span class="font-body-lg text-body-lg text-on-surface">Copas</span></div><div class="flex items-baseline gap-1"><span class="font-display-hero text-headline-lg text-primary drop-shadow-[0_0_8px_rgba(210,187,255,0.5)]">12</span><span class="font-caption-caps text-caption-caps text-on-surface-variant">ud</span></div></div>
+<!-- Stat Item 2: Cervezas -->
+<div class="glass-panel rounded-2xl p-4 flex items-center justify-between group hover:bg-white/[0.05] transition-colors"><div class="flex items-center gap-4"><div class="w-12 h-12 flex-shrink-0 rounded-full bg-secondary/10 flex items-center justify-center border border-secondary/20"><span class="material-symbols-outlined text-secondary text-[24px]">sports_bar</span></div><span class="font-body-lg text-body-lg text-on-surface">Cervezas</span></div><div class="flex items-baseline gap-1"><span class="font-display-hero text-headline-lg text-secondary drop-shadow-[0_0_8px_rgba(76,215,246,0.5)]">8</span><span class="font-caption-caps text-caption-caps text-on-surface-variant">ud</span></div></div>
+<!-- Stat Item 3: Chupitos -->
+<div class="glass-panel rounded-2xl p-4 flex items-center justify-between group hover:bg-white/[0.05] transition-colors"><div class="flex items-center gap-4"><div class="w-12 h-12 flex-shrink-0 rounded-full bg-tertiary/10 flex items-center justify-center border border-tertiary/20"><span class="material-symbols-outlined text-tertiary text-[24px]">local_drink</span></div><span class="font-body-lg text-body-lg text-on-surface">Chupitos</span></div><div class="flex items-baseline gap-1"><span class="font-display-hero text-headline-lg text-tertiary drop-shadow-[0_0_8px_rgba(255,176,205,0.5)]">5</span><span class="font-caption-caps text-caption-caps text-on-surface-variant">ud</span></div></div>
+</div>
+</div>
+</main>
+</body></html>

@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Crear Grupo - NightScore</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@500&amp;family=Hanken+Grotesk:wght@500;600;700&amp;family=Sora:wght@700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "inverse-on-surface": "#303036",
+                    "on-secondary-fixed": "#001f26",
+                    "on-secondary-container": "#00424e",
+                    "on-primary-fixed": "#25005a",
+                    "on-primary-container": "#ede0ff",
+                    "secondary-fixed-dim": "#4cd7f6",
+                    "tertiary": "#ffb0cd",
+                    "surface-dim": "#131318",
+                    "tertiary-fixed-dim": "#ffb0cd",
+                    "surface-container-lowest": "#0e0e13",
+                    "surface": "#131318",
+                    "inverse-primary": "#732ee4",
+                    "surface-variant": "#35343a",
+                    "on-primary": "#3f008e",
+                    "primary-container": "#7c3aed",
+                    "surface-container-highest": "#35343a",
+                    "on-surface-variant": "#ccc3d8",
+                    "secondary-fixed": "#acedff",
+                    "outline": "#958da1",
+                    "surface-tint": "#d2bbff",
+                    "error-container": "#93000a",
+                    "on-tertiary-fixed": "#3e0022",
+                    "on-surface": "#e4e1e9",
+                    "on-secondary": "#003640",
+                    "secondary": "#4cd7f6",
+                    "primary": "#d2bbff",
+                    "surface-container-low": "#1b1b20",
+                    "on-secondary-fixed-variant": "#004e5c",
+                    "tertiary-fixed": "#ffd9e4",
+                    "surface-container-high": "#2a292f",
+                    "error": "#ffb4ab",
+                    "surface-bright": "#39383e",
+                    "primary-fixed": "#eaddff",
+                    "on-tertiary": "#640039",
+                    "on-tertiary-container": "#ffdde7",
+                    "on-tertiary-fixed-variant": "#8c0053",
+                    "surface-container": "#1f1f25",
+                    "on-background": "#e4e1e9",
+                    "inverse-surface": "#e4e1e9",
+                    "background": "#131318",
+                    "primary-fixed-dim": "#d2bbff",
+                    "on-primary-fixed-variant": "#5a00c6",
+                    "tertiary-container": "#bf2076",
+                    "on-error-container": "#ffdad6",
+                    "on-error": "#690005",
+                    "outline-variant": "#4a4455",
+                    "secondary-container": "#03b5d3"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "card-gap": "12px",
+                    "container-padding-h": "20px",
+                    "section-margin": "32px",
+                    "inline-sm": "8px",
+                    "inline-md": "16px"
+            },
+            "fontFamily": {
+                    "data-mono": [
+                            "Geist Mono"
+                    ],
+                    "body-lg": [
+                            "Hanken Grotesk"
+                    ],
+                    "display-hero": [
+                            "Sora"
+                    ],
+                    "headline-lg": [
+                            "Sora"
+                    ],
+                    "caption-caps": [
+                            "Hanken Grotesk"
+                    ],
+                    "headline-md": [
+                            "Sora"
+                    ],
+                    "body-md": [
+                            "Hanken Grotesk"
+                    ]
+            },
+            "fontSize": {
+                    "data-mono": [
+                            "14px",
+                            {
+                                    "lineHeight": "20px",
+                                    "fontWeight": "500"
+                            }
+                    ],
+                    "body-lg": [
+                            "18px",
+                            {
+                                    "lineHeight": "28px",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "display-hero": [
+                            "40px",
+                            {
+                                    "lineHeight": "48px",
+                                    "letterSpacing": "-0.02em",
+                                    "fontWeight": "800"
+                            }
+                    ],
+                    "headline-lg": [
+                            "32px",
+                            {
+                                    "lineHeight": "40px",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "caption-caps": [
+                            "12px",
+                            {
+                                    "lineHeight": "16px",
+                                    "letterSpacing": "0.1em",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "headline-md": [
+                            "24px",
+                            {
+                                    "lineHeight": "32px",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "body-md": [
+                            "16px",
+                            {
+                                    "lineHeight": "24px",
+                                    "fontWeight": "500"
+                            }
+                    ]
+            }
+    },
+        },
+      }
+    </script>
+<style>
+        body { background-color: #0A0A0F; color: #e4e1e9; }
+        .glass-input {
+            background-color: rgba(19, 19, 24, 0.6);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .glass-input:focus {
+            border-color: #4cd7f6;
+            outline: none;
+            box-shadow: 0 0 12px rgba(76, 215, 246, 0.3);
+        }
+        .gradient-border {
+            background: linear-gradient(#0A0A0F, #0A0A0F) padding-box,
+                        linear-gradient(to right, #d2bbff, #ffb0cd) border-box;
+            border: 2px solid transparent;
+        }
+        .step-hidden { display: none; }
+        .checkbox-custom:checked {
+            background-color: #7c3aed;
+            border-color: #7c3aed;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="min-h-screen bg-background font-body-md antialiased pb-24">
+<!-- Header (Transactional, hidden global nav) -->
+<header class="fixed top-0 w-full z-50 bg-surface/60 backdrop-blur-xl border-b border-white/10 shadow-sm flex justify-between items-center px-container-padding-h h-16">
+<button class="text-on-surface hover:opacity-80 transition-opacity p-2 -ml-2 rounded-full active:scale-95" id="btn-back">
+<span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span>
+</button>
+<h1 class="font-headline-md text-headline-md text-on-surface">Crear Grupo</h1>
+<div class="w-10"></div> <!-- Spacer for centering -->
+</header>
+<main class="pt-20 px-container-padding-h max-w-md mx-auto h-full flex flex-col min-h-[calc(100vh-80px)]">
+<!-- Step Indicators -->
+<div class="flex gap-2 mb-section-margin pt-4">
+<div class="h-1 flex-1 bg-primary rounded-full transition-colors duration-300" id="ind-1"></div>
+<div class="h-1 flex-1 bg-surface-variant rounded-full transition-colors duration-300" id="ind-2"></div>
+<div class="h-1 flex-1 bg-surface-variant rounded-full transition-colors duration-300" id="ind-3"></div>
+</div>
+<form class="flex-1 flex flex-col" id="create-group-form" onsubmit="event.preventDefault();">
+<!-- Step 1: Info -->
+<div class="flex-1 flex flex-col animate-fade-in" id="step-1">
+<div class="flex justify-center mb-8">
+<button class="w-32 h-32 rounded-full gradient-border flex items-center justify-center bg-surface relative overflow-hidden group hover:opacity-90 transition-opacity" type="button">
+<span class="material-symbols-outlined text-4xl text-primary" data-icon="photo_camera">photo_camera</span>
+<div class="absolute inset-0 bg-black/40 hidden group-hover:flex items-center justify-center backdrop-blur-sm">
+<span class="font-body-md text-body-md text-white">Subir</span>
+</div>
+</button>
+</div>
+<div class="space-y-6">
+<div class="flex flex-col gap-2">
+<label class="font-body-md text-body-md text-on-surface-variant ml-1">Nombre del grupo</label>
+<input class="glass-input rounded-xl px-4 py-4 font-body-lg text-body-lg text-on-surface w-full placeholder:text-outline transition-all" placeholder="Ej: Night Riders" required="" type="text"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-body-md text-body-md text-on-surface-variant ml-1">Descripción</label>
+<textarea class="glass-input rounded-xl px-4 py-4 font-body-md text-body-md text-on-surface w-full placeholder:text-outline resize-none transition-all" placeholder="¿De qué trata este grupo?" rows="3"></textarea>
+</div>
+</div>
+</div>
+<!-- Step 2: Privacy -->
+<div class="flex-1 flex flex-col step-hidden animate-fade-in" id="step-2">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-2">Privacidad</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8">¿Quién puede unirse a tu grupo?</p>
+<div class="space-y-4">
+<label class="flex items-start p-4 rounded-xl glass-input cursor-pointer hover:bg-surface-variant/50 transition-colors border border-primary">
+<input checked="" class="mt-1 w-5 h-5 text-primary bg-surface border-outline focus:ring-primary focus:ring-offset-background" name="privacy" type="radio" value="invite"/>
+<div class="ml-4 flex-1">
+<span class="block font-body-lg text-body-lg text-on-surface">Solo con invitación</span>
+<span class="block font-body-md text-body-md text-on-surface-variant mt-1">Nadie puede encontrar este grupo en las búsquedas. Solo se unen con enlace.</span>
+</div>
+<span class="material-symbols-outlined text-primary ml-2" data-icon="lock">lock</span>
+</label>
+<label class="flex items-start p-4 rounded-xl glass-input cursor-pointer hover:bg-surface-variant/50 transition-colors">
+<input class="mt-1 w-5 h-5 text-primary bg-surface border-outline focus:ring-primary focus:ring-offset-background" name="privacy" type="radio" value="public"/>
+<div class="ml-4 flex-1">
+<span class="block font-body-lg text-body-lg text-on-surface">Abierto a búsquedas</span>
+<span class="block font-body-md text-body-md text-on-surface-variant mt-1">Cualquier usuario puede encontrar el grupo y solicitar unirse.</span>
+</div>
+<span class="material-symbols-outlined text-outline ml-2" data-icon="public">public</span>
+</label>
+</div>
+</div>
+<!-- Step 3: Invites -->
+<div class="flex-1 flex flex-col step-hidden animate-fade-in" id="step-3">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-2">Invitar amigos</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Añade a los primeros miembros.</p>
+<div class="relative mb-6">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline" data-icon="search">search</span>
+<input class="glass-input rounded-full w-full pl-12 pr-4 py-3 font-body-md text-body-md text-on-surface placeholder:text-outline focus:border-secondary" placeholder="Buscar amigos..." type="text"/>
+</div>
+<div class="flex-1 overflow-y-auto space-y-2 -mx-2 px-2 pb-4">
+<!-- User Item -->
+<label class="flex items-center p-3 rounded-xl hover:bg-surface-variant/30 transition-colors cursor-pointer">
+<img alt="Avatar" class="w-12 h-12 rounded-full object-cover mr-4 border border-white/10" data-alt="A close up portrait of a young woman with natural makeup, studio lighting, dark background, premium photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZa6SnzuMslTBpKuK5POBXVvW4BOj0H7CkLLjovgAKDloF1BQ4M3G1Ex64nHGFtG4y3xuhcSL7Ej1RW-qz4bMLVef0JFfR2mwCmY3xqgGhtDfRzQRRssji6heE6zUFykk8bc5Dm1rqmssEI2spVdYZhSSRAlfFgcz0fLZt7mzseUoeGto_bz0b-bDmtLNhfkp7-dEy2WaSygNHwjT8w9U21X6VkaEqd99Pc2nZ8UsPVC3NGijpBA69gX7zREL2yaCAhKGpAMiwvl8"/>
+<div class="flex-1">
+<span class="block font-body-lg text-body-lg text-on-surface">Alex Rivera</span>
+<span class="block font-data-mono text-data-mono text-on-surface-variant">@arivera</span>
+</div>
+<input class="checkbox-custom w-6 h-6 rounded-md border-outline bg-surface-dim focus:ring-primary focus:ring-offset-background ml-2" type="checkbox"/>
+</label>
+<label class="flex items-center p-3 rounded-xl hover:bg-surface-variant/30 transition-colors cursor-pointer">
+<img alt="Avatar" class="w-12 h-12 rounded-full object-cover mr-4 border border-white/10" data-alt="A portrait of a young man with short hair looking directly at camera, soft lighting, dark club background, premium portrait photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5zyMgTbXTEyiNI4nHI0PnpH1glqM_Fou2wHfcFsUlvKryVdkjv7hgfnDOEJh8d8Zkadg3mSxZDQoBXkhLcTBtdwO49d_GTvC3lSPaBRNs56I095T1ervkfvVX_C47K8DLrumkPu5dGLNGWC1FgZT22bPH1G3Ic_4AyVK5oiEFdGfVXHFa2ISkLN8IyeRvJEnbOQYxwzD6Ac6WwsWZZko36L7n4hW3vWSZkmtDgHpSOMhlGLpwfBtxFlUVd2e9h1XP55dOj7VqXeM"/>
+<div class="flex-1">
+<span class="block font-body-lg text-body-lg text-on-surface">Leo Messi</span>
+<span class="block font-data-mono text-data-mono text-on-surface-variant">@leom</span>
+</div>
+<input class="checkbox-custom w-6 h-6 rounded-md border-outline bg-surface-dim focus:ring-primary focus:ring-offset-background ml-2" type="checkbox"/>
+</label>
+</div>
+</div>
+<!-- Footer Actions -->
+<div class="mt-auto pt-6 pb-6">
+<button class="w-full bg-gradient-to-r from-primary-container to-tertiary-container text-white font-body-lg text-body-lg py-4 rounded-xl shadow-[0_0_24px_rgba(124,58,237,0.3)] hover:shadow-[0_0_32px_rgba(124,58,237,0.5)] transition-all active:scale-[0.98]" id="btn-next" type="button">
+                    Siguiente
+                </button>
+</div>
+</form>
+</main>
+<script>
+        const steps = [
+            document.getElementById('step-1'),
+            document.getElementById('step-2'),
+            document.getElementById('step-3')
+        ];
+        const indicators = [
+            document.getElementById('ind-1'),
+            document.getElementById('ind-2'),
+            document.getElementById('ind-3')
+        ];
+        const btnNext = document.getElementById('btn-next');
+        const btnBack = document.getElementById('btn-back');
+        let currentStep = 0;
+
+        function updateUI() {
+            // Update steps visibility
+            steps.forEach((step, index) => {
+                if (index === currentStep) {
+                    step.classList.remove('step-hidden');
+                } else {
+                    step.classList.add('step-hidden');
+                }
+            });
+
+            // Update indicators
+            indicators.forEach((ind, index) => {
+                if (index <= currentStep) {
+                    ind.classList.remove('bg-surface-variant');
+                    ind.classList.add('bg-primary');
+                } else {
+                    ind.classList.remove('bg-primary');
+                    ind.classList.add('bg-surface-variant');
+                }
+            });
+
+            // Update button text
+            if (currentStep === steps.length - 1) {
+                btnNext.textContent = 'Crear grupo';
+            } else {
+                btnNext.textContent = 'Siguiente';
+            }
+        }
+
+        btnNext.addEventListener('click', () => {
+            if (currentStep < steps.length - 1) {
+                currentStep++;
+                updateUI();
+            } else {
+                // Submit form logic here
+                btnNext.innerHTML = '<span class="material-symbols-outlined animate-spin" data-icon="progress_activity">progress_activity</span>';
+                setTimeout(() => {
+                    alert('Grupo creado exitosamente');
+                }, 1000);
+            }
+        });
+
+        btnBack.addEventListener('click', () => {
+            if (currentStep > 0) {
+                currentStep--;
+                updateUI();
+            } else {
+                // Go back to previous screen
+                alert('Volver atrás');
+            }
+        });
+        
+        // Radio button styling update
+        const radioLabels = document.querySelectorAll('input[type="radio"][name="privacy"]');
+        radioLabels.forEach(radio => {
+            radio.addEventListener('change', (e) => {
+                document.querySelectorAll('input[type="radio"][name="privacy"]').forEach(r => {
+                   r.closest('label').classList.remove('border', 'border-primary');
+                   r.closest('label').querySelector('.material-symbols-outlined').classList.replace('text-primary', 'text-outline');
+                });
+                if(e.target.checked) {
+                    e.target.closest('label').classList.add('border', 'border-primary');
+                    e.target.closest('label').querySelector('.material-symbols-outlined').classList.replace('text-outline', 'text-primary');
+                }
+            });
+        });
+    </script>
+</body></html>

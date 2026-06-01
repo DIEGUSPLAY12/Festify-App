@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Estadísticas - NightScore</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&amp;family=Hanken+Grotesk:wght@400;500;600;700&amp;family=Geist+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-surface-variant": "#ccc3d8",
+                      "background": "#131318",
+                      "inverse-on-surface": "#303036",
+                      "surface-variant": "#35343a",
+                      "tertiary": "#ffb0cd",
+                      "surface": "#131318",
+                      "tertiary-container": "#bf2076",
+                      "on-error": "#690005",
+                      "on-secondary-fixed": "#001f26",
+                      "inverse-surface": "#e4e1e9",
+                      "surface-container-low": "#1b1b20",
+                      "on-tertiary-fixed": "#3e0022",
+                      "outline": "#958da1",
+                      "secondary-fixed": "#acedff",
+                      "tertiary-fixed": "#ffd9e4",
+                      "primary-fixed": "#eaddff",
+                      "surface-container-high": "#2a292f",
+                      "tertiary-fixed-dim": "#ffb0cd",
+                      "surface-tint": "#d2bbff",
+                      "on-secondary-container": "#00424e",
+                      "error": "#ffb4ab",
+                      "primary-fixed-dim": "#d2bbff",
+                      "surface-container-lowest": "#0e0e13",
+                      "on-tertiary": "#640039",
+                      "on-error-container": "#ffdad6",
+                      "surface-bright": "#39383e",
+                      "on-surface": "#e4e1e9",
+                      "secondary": "#4cd7f6",
+                      "on-primary": "#3f008e",
+                      "surface-dim": "#131318",
+                      "inverse-primary": "#732ee4",
+                      "on-primary-container": "#ede0ff",
+                      "primary": "#d2bbff",
+                      "on-secondary": "#003640",
+                      "secondary-fixed-dim": "#4cd7f6",
+                      "primary-container": "#7c3aed",
+                      "on-tertiary-fixed-variant": "#8c0053",
+                      "error-container": "#93000a",
+                      "outline-variant": "#4a4455",
+                      "on-secondary-fixed-variant": "#004e5c",
+                      "on-primary-fixed": "#25005a",
+                      "on-background": "#e4e1e9",
+                      "on-tertiary-container": "#ffdde7",
+                      "surface-container-highest": "#35343a",
+                      "secondary-container": "#03b5d3",
+                      "on-primary-fixed-variant": "#5a00c6",
+                      "surface-container": "#1f1f25"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "section-margin": "32px",
+                      "card-gap": "12px",
+                      "inline-sm": "8px",
+                      "inline-md": "16px",
+                      "container-padding-h": "20px"
+              },
+              "fontFamily": {
+                      "display-hero": [
+                              "Sora"
+                      ],
+                      "headline-lg": [
+                              "Sora"
+                      ],
+                      "body-lg": [
+                              "Hanken Grotesk"
+                      ],
+                      "headline-md": [
+                              "Sora"
+                      ],
+                      "body-md": [
+                              "Hanken Grotesk"
+                      ],
+                      "caption-caps": [
+                              "Hanken Grotesk"
+                      ],
+                      "data-mono": [
+                              "Geist Mono"
+                      ]
+              },
+              "fontSize": {
+                      "display-hero": [
+                              "40px",
+                              {
+                                      "lineHeight": "48px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "800"
+                              }
+                      ],
+                      "headline-lg": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-md": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "caption-caps": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "letterSpacing": "0.1em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "data-mono": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "fontWeight": "500"
+                              }
+                      ]
+              }
+            }
+          }
+        }
+    </script>
+<style>
+        body {
+            background-color: #131318;
+            color: #e4e1e9;
+        }
+        
+        .glass-card {
+            background: rgba(19, 19, 24, 0.6);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        
+        .neon-glow {
+            text-shadow: 0 0 10px rgba(124, 58, 237, 0.5), 0 0 20px rgba(124, 58, 237, 0.3);
+        }
+        
+        .heat-map-cell {
+            transition: all 0.3s ease;
+        }
+        .heat-map-cell.active-low { background-color: rgba(124, 58, 237, 0.3); }
+        .heat-map-cell.active-med { background-color: rgba(124, 58, 237, 0.6); }
+        .heat-map-cell.active-high { background-color: rgba(124, 58, 237, 1); box-shadow: 0 0 10px rgba(124, 58, 237, 0.8); }
+        .heat-map-cell.inactive { background-color: rgba(255, 255, 255, 0.05); }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="min-h-screen pb-[100px] pt-[80px]">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/60 backdrop-blur-xl border-b border-white/10 shadow-[0_0_24px_rgba(210,187,255,0.1)] flex items-center justify-between px-container-padding-h h-16 w-full">
+<div class="h-10 w-10 rounded-full overflow-hidden bg-surface-container border border-white/10 active:scale-95 transition-transform">
+<img alt="Profile avatar" class="w-full h-full object-cover" data-alt="Close up portrait of a young person in a dimly lit neon club environment. Deep blues and vibrant violet lights illuminate their face. The mood is high-end, exclusive, and energetic. The style is sharp, modern portrait photography suitable for a premium nightlife app." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6UMyYmdOEV3AripmWMGdkCC7FTg7Y6z0YlK8I8M72WRnstDeXU91g1gsQBH0ppDHr-YtGCFc5jlLOKoDFVFADXiQikmajDO1glwtvH4mQlXvvPwSyqs7aSpF6almh-nUStAlLMqcaTY_NynEZy6QyeZvm6Kw2n0VsT-fXmcbEM9PyMMPLvGPFfNK8rA2Ts-4xCMQP-9UtaKIdeW0lT_QbRMl62rvf0W5hoS_tedPGuAz1yzq8Il6GtQhxD_JNLlq3lQOnx_G4xcs"/>
+</div>
+<h1 class="font-headline-md text-headline-md font-display-hero text-headline-md text-primary tracking-tighter">STATISTICS</h1>
+<button class="text-on-surface-variant hover:opacity-80 transition-opacity active:scale-95 transition-transform">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">settings</span>
+</button>
+</header>
+<main class="px-container-padding-h space-y-section-margin">
+<!-- Profile Summary Card -->
+<section class="glass-card rounded-xl p-inline-md flex flex-col items-center justify-center relative overflow-hidden mt-6">
+<div class="absolute inset-0 bg-gradient-to-br from-primary-container/20 to-transparent pointer-events-none"></div>
+<p class="font-caption-caps text-caption-caps text-on-surface-variant tracking-widest uppercase mb-2">PUNTUACIÓN GLOBAL</p>
+<h2 class="font-display-hero text-display-hero text-primary neon-glow mb-1">8.4</h2>
+<div class="bg-primary/10 text-primary px-3 py-1 rounded-full font-body-md text-body-md border border-primary/20 mb-6">
+                Lvl 12 Night Owl
+            </div>
+<div class="w-full">
+<div class="flex justify-between font-caption-caps text-caption-caps text-on-surface-variant mb-2">
+<span>Nivel Actual</span>
+<span>Lvl 13</span>
+</div>
+<div class="w-full h-2 bg-white/5 rounded-full overflow-hidden">
+<div class="h-full bg-gradient-to-r from-primary to-secondary w-[75%] shadow-[0_0_10px_rgba(210,187,255,0.8)]"></div>
+</div>
+<p class="text-right font-caption-caps text-caption-caps text-on-surface-variant mt-2 opacity-70">250 XP para subir</p>
+</div>
+</section>
+<!-- Key Metrics Grid -->
+<section>
+<h3 class="font-headline-lg text-headline-lg text-on-surface mb-card-gap">Métricas Clave</h3>
+<div class="grid grid-cols-2 gap-card-gap">
+<div class="glass-card rounded-xl p-inline-md flex flex-col justify-between aspect-square">
+<span class="material-symbols-outlined text-primary mb-2" style="font-variation-settings: 'FILL' 1;">trophy</span>
+<div>
+<p class="font-data-mono text-data-mono text-display-hero text-on-surface">14</p>
+<p class="font-caption-caps text-caption-caps text-on-surface-variant">MVP Wins</p>
+</div>
+</div>
+<div class="glass-card rounded-xl p-inline-md flex flex-col justify-between aspect-square">
+<span class="material-symbols-outlined text-secondary mb-2" style="font-variation-settings: 'FILL' 1;">nightlife</span>
+<div>
+<p class="font-data-mono text-data-mono text-display-hero text-on-surface">42</p>
+<p class="font-caption-caps text-caption-caps text-on-surface-variant">Noches Totales</p>
+</div>
+</div>
+<div class="glass-card rounded-xl p-inline-md flex flex-col justify-between aspect-[2/1] col-span-2">
+<div class="flex items-center justify-between">
+<span class="material-symbols-outlined text-tertiary" style="font-variation-settings: 'FILL' 1;">location_on</span>
+<p class="font-caption-caps text-caption-caps text-on-surface-variant">Local Favorito</p>
+</div>
+<p class="font-headline-md text-headline-md text-on-surface truncate">Pacha Madrid</p>
+</div>
+</div>
+</section>
+<!-- Activity Heat Map -->
+<section>
+<div class="flex items-center justify-between mb-card-gap">
+<h3 class="font-headline-lg text-headline-lg text-on-surface">Actividad (30 Días)</h3>
+<span class="font-caption-caps text-caption-caps text-primary">INTENSIDAD</span>
+</div>
+<div class="glass-card rounded-xl p-inline-md">
+<div class="grid grid-cols-7 gap-1 sm:gap-2">
+<!-- Javascript will populate this grid -->
+<script>
+                        for(let i=0; i<30; i++) {
+                            const intensity = Math.random();
+                            let className = 'heat-map-cell aspect-square rounded-sm ';
+                            if(intensity < 0.3) className += 'inactive';
+                            else if(intensity < 0.6) className += 'active-low';
+                            else if(intensity < 0.85) className += 'active-med';
+                            else className += 'active-high';
+                            
+                            document.write(`<div class="${className}"></div>`);
+                        }
+                    </script>
+</div>
+<div class="flex items-center justify-end mt-4 gap-2 font-caption-caps text-caption-caps text-on-surface-variant">
+<span>Menos</span>
+<div class="w-3 h-3 rounded-sm heat-map-cell inactive"></div>
+<div class="w-3 h-3 rounded-sm heat-map-cell active-low"></div>
+<div class="w-3 h-3 rounded-sm heat-map-cell active-med"></div>
+<div class="w-3 h-3 rounded-sm heat-map-cell active-high"></div>
+<span>Más</span>
+</div>
+</div>
+</section>
+<!-- Consumption Chart Section Placeholder -->
+<section>
+<h3 class="font-headline-lg text-headline-lg text-on-surface mb-card-gap">Consumo (Última Semana)</h3>
+<div class="glass-card rounded-xl p-inline-md h-48 flex items-center justify-center relative overflow-hidden">
+<!-- Abstract chart representation for layout purposes -->
+<div class="absolute bottom-0 left-0 w-full h-[60%] flex items-end justify-between px-4">
+<div class="w-2 bg-tertiary-container/80 h-[20%] rounded-t-sm shadow-[0_0_8px_rgba(191,32,118,0.5)]"></div>
+<div class="w-2 bg-secondary/80 h-[40%] rounded-t-sm shadow-[0_0_8px_rgba(76,215,246,0.5)]"></div>
+<div class="w-2 bg-tertiary-container/80 h-[80%] rounded-t-sm shadow-[0_0_8px_rgba(191,32,118,0.5)]"></div>
+<div class="w-2 bg-secondary/80 h-[30%] rounded-t-sm shadow-[0_0_8px_rgba(76,215,246,0.5)]"></div>
+<div class="w-2 bg-tertiary-container/80 h-[90%] rounded-t-sm shadow-[0_0_8px_rgba(191,32,118,0.5)]"></div>
+<div class="w-2 bg-secondary/80 h-[60%] rounded-t-sm shadow-[0_0_8px_rgba(76,215,246,0.5)]"></div>
+<div class="w-2 bg-tertiary-container/80 h-[100%] rounded-t-sm shadow-[0_0_8px_rgba(191,32,118,0.5)]"></div>
+</div>
+<div class="absolute top-4 right-4 flex flex-col gap-2">
+<div class="flex items-center gap-2">
+<div class="w-3 h-3 bg-tertiary-container rounded-full"></div>
+<span class="font-caption-caps text-caption-caps text-on-surface-variant">Copas</span>
+</div>
+<div class="flex items-center gap-2">
+<div class="w-3 h-3 bg-secondary rounded-full"></div>
+<span class="font-caption-caps text-caption-caps text-on-surface-variant">Cervezas</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 w-full z-50 rounded-t-xl border-t border-white/10 shadow-[0_-8px_24px_rgba(0,0,0,0.5)] bg-surface-container/60 backdrop-blur-xl flex justify-around items-center h-20 px-4 pb-safe md:hidden">
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-secondary transition-colors active:scale-90 transition-all duration-200" href="#">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 0;">home</span>
+<span class="font-caption-caps text-caption-caps">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-secondary transition-colors active:scale-90 transition-all duration-200" href="#">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 0;">leaderboard</span>
+<span class="font-caption-caps text-caption-caps">Ranking</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-secondary transition-colors active:scale-90 transition-all duration-200" href="#">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 0;">group</span>
+<span class="font-caption-caps text-caption-caps">Social</span>
+</a>
+<a class="flex flex-col items-center justify-center text-primary drop-shadow-[0_0_8px_rgba(210,187,255,0.6)] hover:text-secondary transition-colors active:scale-90 transition-all duration-200" href="#">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 1;">person</span>
+<span class="font-caption-caps text-caption-caps">Profile</span>
+</a>
+</nav>
+</body></html>

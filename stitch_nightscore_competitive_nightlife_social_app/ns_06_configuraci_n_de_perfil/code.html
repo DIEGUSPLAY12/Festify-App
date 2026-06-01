@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Configuración de Perfil - NightScore</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@700;800&amp;family=Hanken+Grotesk:wght@500;600;700&amp;family=Geist+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-bright": "#39383e",
+                        "background": "#131318",
+                        "error-container": "#93000a",
+                        "secondary": "#4cd7f6",
+                        "inverse-surface": "#e4e1e9",
+                        "surface-dim": "#131318",
+                        "on-tertiary-fixed-variant": "#8c0053",
+                        "on-secondary-container": "#00424e",
+                        "on-tertiary": "#640039",
+                        "inverse-on-surface": "#303036",
+                        "tertiary": "#ffb0cd",
+                        "on-secondary-fixed": "#001f26",
+                        "surface-container-highest": "#35343a",
+                        "surface-container-lowest": "#0e0e13",
+                        "surface-tint": "#d2bbff",
+                        "on-error": "#690005",
+                        "tertiary-container": "#bf2076",
+                        "outline": "#958da1",
+                        "on-error-container": "#ffdad6",
+                        "on-tertiary-container": "#ffdde7",
+                        "on-primary-fixed-variant": "#5a00c6",
+                        "secondary-container": "#03b5d3",
+                        "surface-variant": "#35343a",
+                        "on-surface": "#e4e1e9",
+                        "tertiary-fixed": "#ffd9e4",
+                        "on-tertiary-fixed": "#3e0022",
+                        "surface-container-high": "#2a292f",
+                        "surface-container-low": "#1b1b20",
+                        "surface-container": "#1f1f25",
+                        "on-primary-fixed": "#25005a",
+                        "on-secondary-fixed-variant": "#004e5c",
+                        "primary-fixed-dim": "#d2bbff",
+                        "primary-container": "#7c3aed",
+                        "on-primary": "#3f008e",
+                        "secondary-fixed-dim": "#4cd7f6",
+                        "primary": "#d2bbff",
+                        "on-primary-container": "#ede0ff",
+                        "on-surface-variant": "#ccc3d8",
+                        "surface": "#131318",
+                        "tertiary-fixed-dim": "#ffb0cd",
+                        "secondary-fixed": "#acedff",
+                        "on-background": "#e4e1e9",
+                        "on-secondary": "#003640",
+                        "inverse-primary": "#732ee4",
+                        "outline-variant": "#4a4455",
+                        "error": "#ffb4ab",
+                        "primary-fixed": "#eaddff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "container-padding-h": "20px",
+                        "inline-md": "16px",
+                        "section-margin": "32px",
+                        "inline-sm": "8px",
+                        "card-gap": "12px"
+                    },
+                    "fontFamily": {
+                        "data-mono": ["Geist Mono"],
+                        "headline-md": ["Sora"],
+                        "body-lg": ["Hanken Grotesk"],
+                        "caption-caps": ["Hanken Grotesk"],
+                        "body-md": ["Hanken Grotesk"],
+                        "display-hero": ["Sora"],
+                        "headline-lg": ["Sora"]
+                    },
+                    "fontSize": {
+                        "data-mono": ["14px", { "lineHeight": "20px", "fontWeight": "500" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "600" }],
+                        "caption-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "500" }],
+                        "display-hero": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .glass-card {
+            background: rgba(19, 19, 24, 0.6);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .neon-glow-primary {
+            box-shadow: 0 0 24px rgba(210, 187, 255, 0.3);
+        }
+        .neon-glow-secondary {
+            box-shadow: 0 0 24px rgba(76, 215, 246, 0.3);
+        }
+        .text-glow {
+            text-shadow: 0 0 10px rgba(210, 187, 255, 0.5);
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body-md min-h-screen custom-scrollbar flex flex-col">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-lg flex justify-between items-center px-container-padding-h h-16 border-b border-white/5">
+<button class="text-on-surface hover:text-secondary transition-colors active:opacity-70">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">arrow_back</span>
+</button>
+<div class="font-headline-lg text-headline-lg bg-gradient-to-r from-primary to-tertiary bg-clip-text text-transparent">NightScore</div>
+<div class="w-6"></div> <!-- Spacer for centering -->
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow pt-24 pb-section-margin px-container-padding-h max-w-md mx-auto w-full flex flex-col relative z-10">
+<!-- Stepper Header -->
+<div class="mb-8">
+<h1 class="font-headline-md text-headline-md text-on-background mb-6 text-glow">Configuración de Perfil</h1>
+<div class="flex items-center justify-between relative">
+<div class="absolute left-0 top-1/2 -translate-y-1/2 w-full h-0.5 bg-surface-container-high -z-10"></div>
+<div class="absolute left-0 top-1/2 -translate-y-1/2 w-1/3 h-0.5 bg-gradient-to-r from-primary to-secondary -z-10"></div>
+<!-- Step 1 -->
+<div class="flex flex-col items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-gradient-to-r from-primary to-tertiary flex items-center justify-center text-background font-caption-caps text-caption-caps neon-glow-primary">1</div>
+<span class="font-caption-caps text-caption-caps text-primary">Identidad</span>
+</div>
+<!-- Step 2 -->
+<div class="flex flex-col items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest border border-white/10 flex items-center justify-center text-on-surface-variant font-caption-caps text-caption-caps">2</div>
+<span class="font-caption-caps text-caption-caps text-on-surface-variant">Detalles</span>
+</div>
+<!-- Step 3 -->
+<div class="flex flex-col items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest border border-white/10 flex items-center justify-center text-on-surface-variant font-caption-caps text-caption-caps">3</div>
+<span class="font-caption-caps text-caption-caps text-on-surface-variant">Alertas</span>
+</div>
+</div>
+</div>
+<!-- Step 1 Content: Identidad -->
+<div class="flex-grow flex flex-col gap-section-margin animate-[fadeIn_0.3s_ease-out]">
+<!-- Profile Photo Upload -->
+<div class="flex flex-col items-center justify-center gap-4">
+<div class="relative group cursor-pointer">
+<div class="w-32 h-32 rounded-full p-1 bg-gradient-to-tr from-primary via-tertiary to-secondary neon-glow-primary">
+<div class="w-full h-full rounded-full bg-surface-container-lowest overflow-hidden relative">
+<!-- Placeholder Image -->
+<img alt="Profile avatar" class="w-full h-full object-cover opacity-80" data-alt="A close-up portrait of a young person in a dimly lit, neon-infused nightclub setting. The subject is illuminated by soft, vibrant purple and cyan lights reflecting off their skin, perfectly matching the premium dark club aesthetic. The background is a beautifully blurred bokeh of colorful club lights, creating a sense of energetic depth and exclusive nightlife atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3NcBWjnrZfIh0r-3wW2RQxJe07-Hy2vZKwdmz01waePwbjfeFGmpdEHRWSezqsG0LZmSUZx884Fj4QgZLBHmvfs3AvKEH5t0P-bcqsF75zAlU2ybFoia2p3f1tTisOiB1WTcTWvMWSclQizyFKI5QXFc4miV-isYh64sXOuF8gYTloW9n9naRmEPnFWmYQPk9Q2aeDR0UlvpD2x1X-9FJ0OD1F9WOUxK_p6knGN2p6-yeCtvSaCYH9dcmt8pNvoF_khPQUWa73gk"/>
+<!-- Overlay -->
+<div class="absolute inset-0 bg-background/50 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity backdrop-blur-sm">
+<span class="material-symbols-outlined text-primary mb-1" style="font-variation-settings: 'FILL' 1;">add_a_photo</span>
+<span class="font-caption-caps text-caption-caps text-on-background">Cambiar</span>
+</div>
+</div>
+</div>
+</div>
+<p class="font-caption-caps text-caption-caps text-on-surface-variant">Toca para actualizar foto</p>
+</div>
+<!-- Form Fields -->
+<div class="flex flex-col gap-inline-md">
+<div class="glass-card rounded-xl p-4 flex flex-col gap-1 focus-within:border-secondary focus-within:neon-glow-secondary transition-all">
+<label class="font-caption-caps text-caption-caps text-on-surface-variant">Username</label>
+<div class="flex items-center gap-2">
+<span class="text-secondary font-data-mono text-data-mono">@</span>
+<input class="bg-transparent border-none outline-none text-on-background font-body-lg text-body-lg w-full p-0 focus:ring-0 placeholder-on-surface-variant/50" placeholder="tu_usuario" type="text" value="nightowl_99"/>
+</div>
+</div>
+<div class="glass-card rounded-xl p-4 flex flex-col gap-1 focus-within:border-primary focus-within:neon-glow-primary transition-all">
+<label class="font-caption-caps text-caption-caps text-on-surface-variant">Nombre Real</label>
+<input class="bg-transparent border-none outline-none text-on-background font-body-lg text-body-lg w-full p-0 focus:ring-0 placeholder-on-surface-variant/50" placeholder="Tu nombre completo" type="text" value="Alex Rivera"/>
+</div>
+</div>
+</div>
+<!-- Action Button -->
+<div class="mt-8 pt-4 border-t border-white/5">
+<button class="w-full py-4 rounded-xl bg-gradient-to-r from-primary-container to-tertiary-container text-on-primary font-body-lg text-body-lg flex justify-center items-center gap-2 neon-glow-primary hover:opacity-90 active:scale-[0.98] transition-all">
+                Continuar
+                <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</main>
+<!-- Background Decorative Elements -->
+<div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+<div class="absolute top-[-20%] left-[-10%] w-[50%] h-[50%] rounded-full bg-primary/10 blur-[120px]"></div>
+<div class="absolute bottom-[-20%] right-[-10%] w-[60%] h-[60%] rounded-full bg-tertiary/10 blur-[150px]"></div>
+</div>
+</body></html>

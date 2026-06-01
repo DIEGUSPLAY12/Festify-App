@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>NS-27-Detail: Badge Detail</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;600;700&amp;family=Sora:wght@700;800&amp;family=Geist+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-container": "#7c3aed",
+                        "secondary-fixed": "#acedff",
+                        "on-primary-container": "#ede0ff",
+                        "on-background": "#e4e1e9",
+                        "outline-variant": "#4a4455",
+                        "on-secondary-fixed-variant": "#004e5c",
+                        "inverse-on-surface": "#303036",
+                        "surface-container-high": "#2a292f",
+                        "inverse-primary": "#732ee4",
+                        "surface-variant": "#35343a",
+                        "surface-container": "#1f1f25",
+                        "on-secondary-container": "#00424e",
+                        "on-error-container": "#ffdad6",
+                        "on-secondary": "#003640",
+                        "surface-container-low": "#1b1b20",
+                        "primary": "#d2bbff",
+                        "on-tertiary-fixed": "#3e0022",
+                        "surface-container-highest": "#35343a",
+                        "secondary": "#4cd7f6",
+                        "on-secondary-fixed": "#001f26",
+                        "surface-dim": "#131318",
+                        "surface": "#131318",
+                        "tertiary-container": "#bf2076",
+                        "on-surface": "#e4e1e9",
+                        "tertiary-fixed-dim": "#ffb0cd",
+                        "on-error": "#690005",
+                        "on-primary-fixed-variant": "#5a00c6",
+                        "error": "#ffb4ab",
+                        "surface-bright": "#39383e",
+                        "outline": "#958da1",
+                        "secondary-fixed-dim": "#4cd7f6",
+                        "background": "#131318",
+                        "primary-fixed-dim": "#d2bbff",
+                        "on-tertiary-container": "#ffdde7",
+                        "primary-fixed": "#eaddff",
+                        "on-tertiary": "#640039",
+                        "tertiary": "#ffb0cd",
+                        "on-primary": "#3f008e",
+                        "surface-tint": "#d2bbff",
+                        "tertiary-fixed": "#ffd9e4",
+                        "error-container": "#93000a",
+                        "on-primary-fixed": "#25005a",
+                        "inverse-surface": "#e4e1e9",
+                        "surface-container-lowest": "#0e0e13",
+                        "on-tertiary-fixed-variant": "#8c0053",
+                        "secondary-container": "#03b5d3",
+                        "on-surface-variant": "#ccc3d8"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "section-margin": "32px",
+                        "container-padding-h": "20px",
+                        "inline-sm": "8px",
+                        "inline-md": "16px",
+                        "card-gap": "12px"
+                    },
+                    "fontFamily": {
+                        "caption-caps": ["Hanken Grotesk"],
+                        "headline-md": ["Sora"],
+                        "headline-lg": ["Sora"],
+                        "body-lg": ["Hanken Grotesk"],
+                        "display-hero": ["Sora"],
+                        "data-mono": ["Geist Mono"],
+                        "body-md": ["Hanken Grotesk"]
+                    },
+                    "fontSize": {
+                        "caption-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "700" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "700" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "600" }],
+                        "display-hero": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "data-mono": ["14px", { "lineHeight": "20px", "fontWeight": "500" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "500" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glow-effect {
+            box-shadow: 0 0 40px rgba(124, 58, 237, 0.4);
+        }
+        .text-glow {
+            text-shadow: 0 0 20px rgba(76, 215, 246, 0.6);
+        }
+        .bg-pattern {
+            background-image: radial-gradient(circle at center, rgba(124, 58, 237, 0.15) 0%, transparent 70%);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background min-h-screen flex flex-col antialiased selection:bg-primary-container selection:text-white">
+<!-- Top Navigation Placeholder (Hidden for this modal view based on rules) -->
+<!-- Main Content Area -->
+<main class="flex-grow flex items-center justify-center p-container-padding-h relative overflow-hidden bg-pattern">
+<!-- Subtle Atmospheric Elements -->
+<div class="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none z-0">
+<div class="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-primary-container/20 rounded-full blur-[100px]"></div>
+<div class="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-secondary/10 rounded-full blur-[80px]"></div>
+</div>
+<!-- Detail Card Container -->
+<div class="w-full max-w-md relative z-10 flex flex-col items-center">
+<!-- Badge Icon Container (3D Glowing Effect) -->
+<div class="relative mb-section-margin group">
+<div class="absolute inset-0 bg-gradient-to-tr from-primary-container to-secondary rounded-full blur-xl opacity-50 group-hover:opacity-70 transition-opacity duration-500"></div>
+<div class="relative w-48 h-48 rounded-full bg-surface-container-high border border-white/10 flex items-center justify-center shadow-2xl glow-effect">
+<img alt="Badge Icon" class="w-32 h-32 object-contain filter drop-shadow-[0_0_15px_rgba(210,187,255,0.8)]" data-alt="A highly detailed, 3D rendered glowing trophy or badge icon, floating in a dark, premium void. The object features metallic gold and deep violet textures, illuminated by a strong, neon cyan underlight. The style is hyper-realistic with dramatic studio lighting, perfect for a high-end gaming or fitness app achievement. The overall mood is triumphant, exclusive, and technologically advanced." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCG5jm6jC2WpQpIrTkGCCNY1uaQEo0t_3fiG8OJGk-lFzZcD8GuSKyizvfUPgQJrdcorbL7p3vLSgb0wkhYBcqGhSvmLeQV8S9mdkMuyjZDm98ESie4l3ym-47MZcqhX0MwK983KbsT2guf7Fm8Yp-_LmOO6l1OIXSJ-HfGZUqco_ZRiATY6qQG9f_22bKae137ZvxMfaYXEfho4lc95P6vfIBfb0uazprHuLoHjxraz0SQmhYzEY4qFCoaqPNcaIWdqy5t557371k"/>
+</div>
+</div>
+<!-- Content Area -->
+<div class="text-center w-full bg-surface/60 backdrop-blur-xl border border-white/5 rounded-2xl p-6 shadow-xl mb-section-margin">
+<!-- Title -->
+<h1 class="font-display-hero text-display-hero text-primary mb-2 tracking-tight text-glow">
+                    MVP Legend
+                </h1>
+<!-- Description -->
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-6 leading-relaxed">
+                    Has sido votado como MVP del grupo 10 veces consecutivas.
+                </p>
+<!-- Metadata Divider -->
+<div class="w-full h-px bg-gradient-to-r from-transparent via-outline-variant to-transparent mb-6"></div>
+<!-- Stats Grid -->
+<div class="grid grid-cols-2 gap-4 text-left">
+<div class="bg-surface-container-low p-4 rounded-xl border border-white/5">
+<div class="flex items-center gap-2 mb-1">
+<span class="material-symbols-outlined text-secondary text-[20px]">calendar_today</span>
+<span class="font-caption-caps text-caption-caps text-outline uppercase tracking-wider">Desbloqueado</span>
+</div>
+<p class="font-data-mono text-data-mono text-on-surface">15 Oct, 2023</p>
+</div>
+<div class="bg-surface-container-low p-4 rounded-xl border border-white/5">
+<div class="flex items-center gap-2 mb-1">
+<span class="material-symbols-outlined text-primary text-[20px]">group</span>
+<span class="font-caption-caps text-caption-caps text-outline uppercase tracking-wider">Rareza</span>
+</div>
+<p class="font-data-mono text-data-mono text-on-surface text-secondary">Top 2%</p>
+</div>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="w-full flex flex-col gap-4">
+<button class="w-full py-4 rounded-xl font-body-lg text-body-lg text-white bg-gradient-to-r from-primary-container to-tertiary-container shadow-[0_0_20px_rgba(124,58,237,0.4)] hover:shadow-[0_0_30px_rgba(124,58,237,0.6)] transition-all duration-300 flex items-center justify-center gap-2 active:scale-[0.98]">
+<span class="material-symbols-outlined">share</span>
+                    Compartir Logro
+                </button>
+<button class="w-full py-4 rounded-xl font-body-lg text-body-lg text-secondary border border-secondary/50 hover:bg-secondary/10 transition-colors duration-300 flex items-center justify-center gap-2 active:scale-[0.98]">
+                    Cerrar
+                </button>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation Placeholder (Hidden based on rules for detail/transactional view) -->
+</body></html>

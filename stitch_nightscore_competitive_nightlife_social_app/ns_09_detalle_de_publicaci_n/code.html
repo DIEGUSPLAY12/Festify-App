@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>NightScore - Detalle de Publicación</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@500&amp;family=Hanken+Grotesk:wght@500;600;700&amp;family=Sora:wght@700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-secondary": "#003640",
+                      "error": "#ffb4ab",
+                      "surface-dim": "#131318",
+                      "on-primary-fixed": "#25005a",
+                      "on-background": "#e4e1e9",
+                      "on-tertiary": "#640039",
+                      "on-error-container": "#ffdad6",
+                      "surface-container": "#1f1f25",
+                      "secondary": "#4cd7f6",
+                      "primary-fixed": "#eaddff",
+                      "surface": "#131318",
+                      "on-surface": "#e4e1e9",
+                      "on-error": "#690005",
+                      "surface-container-low": "#1b1b20",
+                      "primary": "#d2bbff",
+                      "on-primary-fixed-variant": "#5a00c6",
+                      "surface-bright": "#39383e",
+                      "primary-container": "#7c3aed",
+                      "on-secondary-fixed": "#001f26",
+                      "surface-variant": "#35343a",
+                      "tertiary-fixed": "#ffd9e4",
+                      "on-tertiary-fixed-variant": "#8c0053",
+                      "on-tertiary-fixed": "#3e0022",
+                      "on-tertiary-container": "#ffdde7",
+                      "on-surface-variant": "#ccc3d8",
+                      "surface-container-lowest": "#0e0e13",
+                      "surface-tint": "#d2bbff",
+                      "inverse-primary": "#732ee4",
+                      "secondary-container": "#03b5d3",
+                      "secondary-fixed": "#acedff",
+                      "primary-fixed-dim": "#d2bbff",
+                      "on-primary-container": "#ede0ff",
+                      "surface-container-high": "#2a292f",
+                      "outline": "#958da1",
+                      "on-primary": "#3f008e",
+                      "inverse-on-surface": "#303036",
+                      "on-secondary-container": "#00424e",
+                      "error-container": "#93000a",
+                      "background": "#131318",
+                      "on-secondary-fixed-variant": "#004e5c",
+                      "tertiary-fixed-dim": "#ffb0cd",
+                      "outline-variant": "#4a4455",
+                      "tertiary-container": "#bf2076",
+                      "surface-container-highest": "#35343a",
+                      "secondary-fixed-dim": "#4cd7f6",
+                      "inverse-surface": "#e4e1e9",
+                      "tertiary": "#ffb0cd"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "inline-sm": "8px",
+                      "container-padding-h": "20px",
+                      "card-gap": "12px",
+                      "section-margin": "32px",
+                      "inline-md": "16px"
+              },
+              "fontFamily": {
+                      "body-md": [
+                              "Hanken Grotesk"
+                      ],
+                      "headline-md": [
+                              "Sora"
+                      ],
+                      "headline-lg": [
+                              "Sora"
+                      ],
+                      "display-hero": [
+                              "Sora"
+                      ],
+                      "caption-caps": [
+                              "Hanken Grotesk"
+                      ],
+                      "data-mono": [
+                              "Geist Mono"
+                      ],
+                      "body-lg": [
+                              "Hanken Grotesk"
+                      ]
+              },
+              "fontSize": {
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "headline-md": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-lg": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "display-hero": [
+                              "40px",
+                              {
+                                      "lineHeight": "48px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "800"
+                              }
+                      ],
+                      "caption-caps": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "letterSpacing": "0.1em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "data-mono": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "600"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+<style>
+        body {
+            background-color: #131318;
+            color: #e4e1e9;
+        }
+        
+        .glass-card {
+            background: rgba(19, 19, 24, 0.6);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .neon-glow-primary {
+            box-shadow: 0 0 24px rgba(124, 58, 237, 0.3);
+        }
+
+        .neon-glow-secondary {
+            box-shadow: 0 0 24px rgba(76, 215, 246, 0.2);
+        }
+
+        /* Hero Image Gradient Overlay */
+        .hero-gradient {
+            background: linear-gradient(to bottom, rgba(19,19,24,0) 0%, rgba(19,19,24,0.4) 50%, #131318 100%);
+        }
+
+        /* Hide scrollbar for clean UI but keep functionality */
+        ::-webkit-scrollbar {
+            width: 0px;
+            background: transparent;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-body-md antialiased min-h-screen flex flex-col relative pb-32">
+<!-- Top Navigation (Contextual Detail Nav - Not the global app bar) -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-container-padding-h h-16 bg-background/40 backdrop-blur-md border-b border-white/5">
+<button aria-label="Volver" class="w-10 h-10 flex items-center justify-center rounded-full glass-card text-on-surface hover:text-secondary transition-colors">
+<span class="material-symbols-outlined" style="font-variation-settings: 'wght' 300;">arrow_back</span>
+</button>
+<button aria-label="Opciones" class="w-10 h-10 flex items-center justify-center rounded-full glass-card text-on-surface hover:text-secondary transition-colors">
+<span class="material-symbols-outlined" style="font-variation-settings: 'wght' 300;">more_horiz</span>
+</button>
+</header>
+<!-- Hero Image Section (55% Height) -->
+<section class="relative w-full h-[486px] min-h-[400px]">
+<img alt="Nightclub scene" class="absolute inset-0 w-full h-full object-cover" data-alt="A vibrant, high-energy nightclub scene captured from the middle of the dance floor. The lighting is an intense mix of deep ultraviolet purples, neon magentas, and electric cyans cutting through atmospheric smoke. Silhouettes of people dancing with raised hands are visible against the bright lasers. The aesthetic is premium, dark, and highly energetic, perfectly matching an elite nightlife application." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_fmZpJkvdizdgLq9yQxs21_WUeEysrY5zKMHbdbOu_QHShGFt2iMptJBcAxrzlQepVW3t2NWf_BF7fIqnflJZWVJEdlykpMJUROMpwBuEECBItFeyAJ6BNxJ6S_fWp9wIJUKrXH0K_7VL5ya-_b8yj_YXQTFyPUAkoNZOeAr2TGp-1F03KDyW-YRFeuQwkf-lmtXxBr5UC6tZsLQ1-W12gaKFLg41_UfZXuNn3ZEsSliAQ71MRgMhv7Vwfk-DkwXQIsaRXh6kcCI"/>
+<!-- Gradient Overlay to blend into background -->
+<div class="absolute inset-0 hero-gradient"></div>
+<!-- Banner MVP Votación (Absolute positioned at bottom of image) -->
+<div class="absolute bottom-6 left-container-padding-h right-container-padding-h">
+<div class="glass-card rounded-xl p-inline-md flex items-center justify-between border border-secondary/30 neon-glow-secondary">
+<div class="flex items-center gap-inline-sm">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">workspace_premium</span>
+<div>
+<p class="font-body-md text-body-md text-on-surface">Vota al MVP de la noche</p>
+<p class="font-caption-caps text-caption-caps text-on-surface-variant">Termina en 2h</p>
+</div>
+</div>
+<button class="bg-secondary/20 text-secondary border border-secondary/50 rounded-full px-4 py-2 font-caption-caps text-caption-caps hover:bg-secondary/30 transition-colors">
+                    VOTAR
+                </button>
+</div>
+</div>
+</section>
+<!-- Main Content Area -->
+<main class="flex-1 px-container-padding-h -mt-4 relative z-10 space-y-section-margin">
+<!-- Header Info: Avatar, Name, Group, Date -->
+<header class="flex items-start gap-4">
+<div class="relative">
+<img alt="User Avatar" class="w-16 h-16 rounded-full object-cover border-2 border-primary" data-alt="A close-up portrait of a stylish young adult looking confidently at the camera. The lighting features subtle neon reflections, fitting a high-end nightlife aesthetic. The background is completely blurred out in dark tones. The overall vibe is premium, modern, and engaging." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQltJDax-d8eJpgwdWzZsUlTJn8pES1t5nyY6i578bajLE5UHR98Egfy2iHY90zyPAnOSMvUELwujqyUmIv37g55VnhkekLFBaic3Y_1DOVPWDBtZ-KcGMp0XYzxFiKl1BvJi54LY8LZj5V6RdNoM_AlmvvUA17z7eBJy1OJfai-aEqJpPlb2RMECZv1DAF1KoF1d-_u--Xf8S2U2wQn-QJj2ccrik55RENFFp01zbxfc-q67f789PJoZX9UqgBhaEueE_dyFvRjE"/>
+<div class="absolute -bottom-2 -right-2 bg-surface rounded-full p-1">
+<div class="bg-primary-container text-on-primary-container rounded-full w-6 h-6 flex items-center justify-center font-caption-caps text-[10px]">
+                        Lvl 4
+                    </div>
+</div>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start">
+<div>
+<h1 class="font-headline-md text-headline-md text-on-surface">Alex Mercer</h1>
+<p class="font-body-md text-body-md text-secondary">Los Noctámbulos</p>
+</div>
+<p class="font-data-mono text-data-mono text-on-surface-variant mt-2">Ayer, 03:45 AM</p>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-2">
+                    Noche increíble en la capital. El set del DJ estuvo espectacular.
+                </p>
+</div>
+</header>
+<!-- Bento Grid: Vibra & La Noche -->
+<div class="grid grid-cols-2 gap-card-gap">
+<!-- Vibra Card -->
+<div class="glass-card rounded-xl p-inline-md flex flex-col justify-between aspect-square">
+<div>
+<h2 class="font-caption-caps text-caption-caps text-on-surface-variant mb-2">SCORE GENERAL</h2>
+<div class="flex items-end gap-2">
+<span class="font-display-hero text-display-hero text-primary bg-gradient-to-r from-primary to-tertiary bg-clip-text text-transparent">8.5</span>
+<span class="font-data-mono text-data-mono text-on-surface-variant mb-2">/10</span>
+</div>
+</div>
+<div>
+<h3 class="font-caption-caps text-caption-caps text-on-surface-variant mb-1">VIBRA</h3>
+<div class="inline-flex items-center gap-2 bg-tertiary-container/30 text-tertiary-fixed border border-tertiary-container rounded-full px-3 py-1">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+<span class="font-body-md text-[14px]">Épica</span>
+</div>
+</div>
+</div>
+<!-- La Noche (Drinks) Card -->
+<div class="glass-card rounded-xl p-inline-md flex flex-col aspect-square">
+<h2 class="font-caption-caps text-caption-caps text-on-surface-variant mb-4">LA NOCHE</h2>
+<div class="flex flex-col gap-3 flex-1 justify-center">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center border border-white/5">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">liquor</span>
+</div>
+<span class="font-body-md text-body-md text-on-surface">Copas</span>
+</div>
+<span class="font-data-mono text-data-mono text-primary font-bold">x3</span>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center border border-white/5">
+<span class="material-symbols-outlined text-tertiary" style="font-variation-settings: 'FILL' 1;">sports_bar</span>
+</div>
+<span class="font-body-md text-body-md text-on-surface">Cervezas</span>
+</div>
+<span class="font-data-mono text-data-mono text-tertiary font-bold">x2</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Location & Crew Section -->
+<div class="space-y-card-gap">
+<h3 class="font-caption-caps text-caption-caps text-on-surface-variant ml-2">UBICACIÓN Y CREW</h3>
+<div class="glass-card rounded-xl overflow-hidden flex flex-col md:flex-row">
+<!-- Map Thumbnail (Placeholder via Unsplash) -->
+<div class="h-32 md:w-1/3 md:h-auto relative bg-surface-container">
+<img alt="Map location" class="w-full h-full object-cover opacity-60 mix-blend-luminosity" data-alt="A top-down view of a dark, stylized city map at night. The streets are illuminated by thin, glowing neon blue and purple lines representing traffic and routes. The background is a deep, dark slate gray, typical of a modern dark-mode UI map component. A subtle glowing cyan marker pinpoints a specific location in the center." data-location="Madrid" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxDwBVHrCfwzXgFFjikJ96ICLF3rp5LqEOMPB2r9-1MY7kDglyvTo2HPLb017lV2YCeNynUdvDFnQAYy2zli_QftPTZwinR5VP5lFut02Dx18XEylpbZH1RMWY0TnCS2LFaomhGix2RVK7aDegFtavmndZ5mDIhiiMfiqyFFotE2YZEE-3jDMf-MsK0Z27BHIzrT9dmhV5T7e-4UMrs2hM40jOUMjLdAB83G97p-fogMi_KBjhd0F5Ias68p_kAgNy0ZF02dOBoro"/>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="w-8 h-8 bg-secondary rounded-full flex items-center justify-center shadow-[0_0_15px_rgba(76,215,246,0.6)]">
+<span class="material-symbols-outlined text-surface text-[18px]" style="font-variation-settings: 'FILL' 1;">location_on</span>
+</div>
+</div>
+</div>
+<!-- Crew List -->
+<div class="p-inline-md flex-1 flex flex-col justify-center bg-surface-container-low/50">
+<p class="font-body-md text-body-md text-on-surface mb-1">Club Space, Downtown</p>
+<p class="font-data-mono text-[12px] text-on-surface-variant mb-4">A 2.5 km de ti</p>
+<div class="flex -space-x-3">
+<img alt="Friend 1" class="w-8 h-8 rounded-full border-2 border-surface-container-low object-cover z-30" data-alt="Small avatar of a smiling young man in a dark setting with slight neon lighting on his face." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAv0IwLGVXe3XTs7DiSYJ4nClckwUGg_AfCCvV2dPIzg-wp3s5Jvsqa09usq76BewGvRwMs2j8VPVk3jix9u-Q8Rt79buJS0NRmdZJKMXCILSPIyPbOn1P0YscpJxxr6g3qutXeWQcBmK4y7CzyRpk1AUdfGbuMVmC6qlUFe_G_osFkM4To00ckglyhSqP25pCGumoaPfP-XFNKcUo0G3sWxiNcfCQ6rFRHcGkJ2rnYp-KP3X_yWgitYRROziCnOpqs_y7y2t2QEIY"/>
+<img alt="Friend 2" class="w-8 h-8 rounded-full border-2 border-surface-container-low object-cover z-20" data-alt="Small avatar of a young woman with a neutral expression, dark background with purple hues." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCs3qyUXK2WzE7PqAvkvWcdLoFnDhkGgkc0hskvUD5N9Una78NbW2K0jlFCLy14h-U84c6grLKcf_hwx1No0PqAWdC7cssi-PVN07iJH6YWTHbIs1VIAsTiM203v2mmmuEFSuS_aii0-ETO9KthV3AD6FbvwqlZcbgB184WyxDk3GqICaxqbgQ78TX_mKgQyGxrodSz9DHATM-KhLkAR1hosQzletw2wxKIYBCyxLXCY3Z-l8imQ1nrodCs0633Kcc7pTdFnt_DL7Q"/>
+<img alt="Friend 3" class="w-8 h-8 rounded-full border-2 border-surface-container-low object-cover z-10" data-alt="Small avatar of a man with glasses, lit by cool blue screen light against a dark background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAAoiuOyJFFnTPh44ryqPt0-Ju9T7P4OVu494fRL0Bp3oKNSqLMYL0iKhp5SNZh8izPxRamAat6Q4sthCsgbhtTTSfMLuS1p8XMlOno78fppfzKLB6kL7-7bmnvslxkxJx8tPJXhRVo7YWye6O7ThNWrZr-oWotLJfLnNowl5jyoWc4GA-E4sgDTDjrHMkghlgbUzlgj4JPCmEnwGqpd2SGurNiDHNTSXA3PCz05J5XeDrgFfUr4z6Ku2D97-HGp0YTYKvStiupLwI"/>
+<div class="w-8 h-8 rounded-full border-2 border-surface-container-low bg-surface-variant flex items-center justify-center z-0">
+<span class="font-caption-caps text-[10px] text-on-surface">+2</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Comments Section -->
+<section class="space-y-4 pb-20">
+<h3 class="font-caption-caps text-caption-caps text-on-surface-variant ml-2 border-b border-white/5 pb-2">COMENTARIOS (12)</h3>
+<div class="flex gap-3">
+<img alt="Commenter Avatar" class="w-8 h-8 rounded-full object-cover" data-alt="Small avatar of a smiling young man in a dark setting with slight neon lighting on his face." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCB8ogOF-lewbauNYX3oxqZOCbLFU7O9jYE-nGtMhts3S5f6x7mV9g76kIKTBjf58xbt4H6yAGwAX-ev65b2hqEmq0vQmanIDSdn3Jbvl2Ps5T2aRPmcWB0rL_MQISsVFzYofNBAqgQG8K-w1lCHFni_2vt3yt6HdCRPYdWPzJadVsTSwm_zjoKokrpNqqv0h4GmO4kOrA4AC9cTskQUkn3wqDes5ToXrPeGMA-TOMNhcecOEgqOl4DGm7d8ND2OAFxSDedhZg9PpY"/>
+<div class="flex-1 glass-card rounded-2xl rounded-tl-none p-3">
+<div class="flex justify-between items-baseline mb-1">
+<span class="font-body-md text-[14px] text-on-surface font-semibold">David K.</span>
+<span class="font-data-mono text-[10px] text-on-surface-variant">Hace 2h</span>
+</div>
+<p class="font-body-md text-[14px] text-on-surface-variant">La próxima no me la pierdo. Qué locura de noche! 🔥</p>
+</div>
+</div>
+<div class="flex gap-3">
+<img alt="Commenter Avatar" class="w-8 h-8 rounded-full object-cover" data-alt="Small avatar of a young woman with a neutral expression, dark background with purple hues." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjfysQVXiimGWz2AFyGaLpnefCdJPuPR9Ii2i2dvtM0Jq8KISMqYCUOojE-uf29yrfclX55CEKvKeIAlkylVbxpTuWE6ej3Ec51M9eznaE1uYNTBP8VBuHihaRT87YrD-OAQKwS-orqD6n-prmWkPyrIY1ofDpnRFV_U1uBv-AT57VBlW0a3ix_WeVAJKF-eX-UkQaEc1ftjEkg0HlFxjcptE46NVxJUBS6da_9J9fX5RWo_81RvY6riPlWwOD7tQqWf3kOX-qTI0"/>
+<div class="flex-1 glass-card rounded-2xl rounded-tl-none p-3">
+<div class="flex justify-between items-baseline mb-1">
+<span class="font-body-md text-[14px] text-on-surface font-semibold">Sarah W.</span>
+<span class="font-data-mono text-[10px] text-on-surface-variant">Hace 3h</span>
+</div>
+<p class="font-body-md text-[14px] text-on-surface-variant">Ese score de vibra se queda corto jaja</p>
+</div>
+</div>
+<button class="w-full text-center font-caption-caps text-caption-caps text-secondary pt-2">
+                VER MÁS COMENTARIOS
+            </button>
+</section>
+</main>
+<!-- Floating Comment Input (Fixed Bottom) -->
+<div class="fixed bottom-0 w-full p-container-padding-h bg-surface/80 backdrop-blur-xl border-t border-white/5 z-50 pb-8">
+<div class="flex items-center gap-3">
+<div class="flex-1 relative">
+<input class="w-full bg-surface-container-low border border-white/10 rounded-full py-3 px-4 pl-4 pr-12 font-body-md text-[14px] text-on-surface focus:outline-none focus:border-secondary focus:ring-1 focus:ring-secondary transition-colors placeholder:text-on-surface-variant" placeholder="Añadir un comentario..." type="text"/>
+</div>
+<button class="w-12 h-12 rounded-full bg-gradient-to-tr from-primary-container to-tertiary-container flex items-center justify-center text-white neon-glow-primary hover:opacity-90 transition-opacity flex-shrink-0">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">send</span>
+</button>
+</div>
+</div>
+</body></html>

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>NS-33 Recap Resumen Final</title>
+<!-- Google Fonts: Sora, Hanken Grotesk, Geist Mono -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@500&amp;family=Hanken+Grotesk:wght@500;600;700&amp;family=Sora:wght@700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Theme Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-low": "#1b1b20",
+                        "secondary": "#4cd7f6",
+                        "on-error": "#690005",
+                        "surface-tint": "#d2bbff",
+                        "on-primary-fixed": "#25005a",
+                        "on-surface-variant": "#ccc3d8",
+                        "on-tertiary-fixed-variant": "#8c0053",
+                        "secondary-fixed-dim": "#4cd7f6",
+                        "tertiary-fixed-dim": "#ffb0cd",
+                        "surface-variant": "#35343a",
+                        "surface-container-high": "#2a292f",
+                        "primary": "#d2bbff",
+                        "on-secondary-fixed-variant": "#004e5c",
+                        "tertiary-container": "#bf2076",
+                        "surface": "#131318",
+                        "on-secondary": "#003640",
+                        "surface-dim": "#131318",
+                        "inverse-on-surface": "#303036",
+                        "secondary-fixed": "#acedff",
+                        "on-surface": "#e4e1e9",
+                        "on-primary": "#3f008e",
+                        "inverse-primary": "#732ee4",
+                        "on-tertiary": "#640039",
+                        "on-error-container": "#ffdad6",
+                        "on-secondary-fixed": "#001f26",
+                        "surface-container-highest": "#35343a",
+                        "primary-fixed": "#eaddff",
+                        "on-tertiary-fixed": "#3e0022",
+                        "primary-fixed-dim": "#d2bbff",
+                        "on-primary-fixed-variant": "#5a00c6",
+                        "on-background": "#e4e1e9",
+                        "on-primary-container": "#ede0ff",
+                        "outline-variant": "#4a4455",
+                        "error": "#ffb4ab",
+                        "on-tertiary-container": "#ffdde7",
+                        "surface-container-lowest": "#0e0e13",
+                        "surface-container": "#1f1f25",
+                        "secondary-container": "#03b5d3",
+                        "tertiary": "#ffb0cd",
+                        "surface-bright": "#39383e",
+                        "primary-container": "#7c3aed",
+                        "inverse-surface": "#e4e1e9",
+                        "outline": "#958da1",
+                        "on-secondary-container": "#00424e",
+                        "background": "#131318",
+                        "tertiary-fixed": "#ffd9e4",
+                        "error-container": "#93000a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "section-margin": "32px",
+                        "container-padding-h": "20px",
+                        "inline-md": "16px",
+                        "inline-sm": "8px",
+                        "card-gap": "12px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Sora"],
+                        "display-hero": ["Sora"],
+                        "data-mono": ["Geist Mono"],
+                        "body-md": ["Hanken Grotesk"],
+                        "headline-lg": ["Sora"],
+                        "caption-caps": ["Hanken Grotesk"],
+                        "body-lg": ["Hanken Grotesk"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "700" }],
+                        "display-hero": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "data-mono": ["14px", { "lineHeight": "20px", "fontWeight": "500" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "500" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "700" }],
+                        "caption-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        /* Custom Glassmorphism Utility for consistent application */
+        .glass-card {
+            background-color: rgba(19, 19, 24, 0.6);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        /* Festive ambient animation */
+        @keyframes pulse-glow {
+            0%, 100% { opacity: 0.3; transform: scale(1); }
+            50% { opacity: 0.6; transform: scale(1.05); }
+        }
+        .ambient-orb {
+            animation: pulse-glow 8s infinite alternate ease-in-out;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface antialiased h-screen w-full overflow-hidden flex flex-col relative selection:bg-primary-container selection:text-on-primary-container">
+<!-- Background Atmospheric Orbs -->
+<div class="absolute top-[-10%] left-[-10%] w-[60%] h-[40%] bg-inverse-primary rounded-full mix-blend-screen filter blur-[100px] opacity-20 ambient-orb pointer-events-none"></div>
+<div class="absolute bottom-[-10%] right-[-10%] w-[70%] h-[50%] bg-tertiary-container rounded-full mix-blend-screen filter blur-[120px] opacity-20 ambient-orb pointer-events-none" style="animation-delay: -4s;"></div>
+<!-- Immersive Story Header (Replaces TopAppBar per rules for focused tasks) -->
+<header class="w-full px-container-padding-h pt-6 pb-4 z-50 flex flex-col gap-4 relative">
+<!-- Story Progress Bar -->
+<div class="flex w-full gap-2">
+<div class="h-1 flex-1 bg-primary rounded-full drop-shadow-[0_0_8px_rgba(210,187,255,0.8)]"></div>
+<div class="h-1 flex-1 bg-primary rounded-full drop-shadow-[0_0_8px_rgba(210,187,255,0.8)]"></div>
+<div class="h-1 flex-1 bg-primary rounded-full drop-shadow-[0_0_8px_rgba(210,187,255,0.8)]"></div>
+<div class="h-1 flex-1 bg-primary rounded-full drop-shadow-[0_0_8px_rgba(210,187,255,0.8)]"></div>
+<div class="h-1 flex-1 bg-primary rounded-full drop-shadow-[0_0_8px_rgba(210,187,255,0.8)]"></div>
+</div>
+<!-- Title & Close Action -->
+<div class="flex justify-between items-center">
+<div class="flex flex-col">
+<span class="font-caption-caps text-caption-caps text-secondary tracking-widest uppercase">Resumen Mensual</span>
+<h1 class="font-headline-md text-headline-md text-on-surface">NS-33 Recap</h1>
+</div>
+<button class="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 backdrop-blur-md border border-white/10 text-on-surface hover:bg-white/20 transition-colors active:scale-90 z-50">
+<span class="material-symbols-outlined text-[24px]">close</span>
+</button>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-1 flex flex-col items-center justify-center px-container-padding-h relative z-10 w-full max-w-md mx-auto">
+<!-- Avatar Central Focus -->
+<div class="relative mb-section-margin flex justify-center items-center">
+<!-- Decorative Rings -->
+<div class="absolute w-[180px] h-[180px] rounded-full border border-primary/30 animate-[spin_10s_linear_infinite]"></div>
+<div class="absolute w-[210px] h-[210px] rounded-full border border-secondary/20 animate-[spin_15s_linear_infinite_reverse]"></div>
+<!-- Avatar Container -->
+<div class="relative w-[140px] h-[140px] rounded-full p-1 bg-gradient-to-tr from-inverse-primary via-primary to-secondary shadow-[0_0_32px_rgba(210,187,255,0.3)]">
+<div class="w-full h-full rounded-full overflow-hidden border-2 border-background">
+<img alt="A high-quality portrait of a stylish young adult in an energetic, premium nightclub setting. The lighting is dark and moody, illuminated by soft neon pink and cyan glows reflecting on their face. They exude confidence and high performance, fitting an elite social fitness aesthetic. Deep blacks contrast with vibrant light bursts." class="w-full h-full object-cover" data-alt="A high-quality portrait of a stylish young adult in an energetic, premium nightclub setting. The lighting is dark and moody, illuminated by soft neon pink and cyan glows reflecting on their face. They exude confidence and high performance, fitting an elite social fitness aesthetic. Deep blacks contrast with vibrant light bursts." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPTPa74mhHa1foNX_0l7KDnpcLm-IVyND-G0CDuoN8vHWDHFl-yMeJAkfyyPeCZNDq-ULL3ppeBt2s7dlvKO3ySRmcUKXCkYfept4EYdRTPtlBSN637lLjAebDc1E2Rpc_mj4_EYXVeqMmNtPEZuTKI5a7LOWN1oFtPI3vhFCp5uH4i-h8ym32zfassFRoDgFNtVu6raxQRwZfGOWm-VpTYJSEaa6KMqmyVaaoQwKhDXNABT-Wn88EjaV_HI6m_iK_5jhiNH7peQQ"/>
+</div>
+<!-- Golden Badge -->
+<div class="absolute -bottom-2 -right-2 bg-gradient-to-br from-[#FFD700] to-[#B8860B] rounded-full px-3 py-1.5 border-2 border-background shadow-[0_4px_12px_rgba(218,165,32,0.5)] flex items-center gap-1 z-20">
+<span class="material-symbols-outlined text-black text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-caption-caps text-caption-caps text-black tracking-widest font-extrabold uppercase">MVP x3</span>
+</div>
+</div>
+</div>
+<!-- Stats Bento Grid -->
+<div class="grid grid-cols-2 gap-card-gap w-full">
+<!-- Stat 1: Noches (Spans full width for emphasis) -->
+<div class="col-span-2 glass-card rounded-xl p-5 flex flex-col items-center justify-center relative overflow-hidden group">
+<div class="absolute inset-0 bg-gradient-to-b from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+<span class="font-caption-caps text-caption-caps text-on-surface-variant mb-1 uppercase tracking-widest">Noches Activas</span>
+<div class="flex items-baseline gap-2">
+<span class="font-display-hero text-display-hero text-primary drop-shadow-[0_0_12px_rgba(210,187,255,0.5)]">28</span>
+<span class="font-body-md text-body-md text-on-surface-variant">/ 30</span>
+</div>
+</div>
+<!-- Stat 2: Ranking -->
+<div class="col-span-1 glass-card rounded-xl p-4 flex flex-col justify-center items-start relative overflow-hidden">
+<span class="material-symbols-outlined text-secondary mb-2 text-[24px]">local_fire_department</span>
+<span class="font-caption-caps text-caption-caps text-on-surface-variant mb-1 uppercase">Ranking</span>
+<span class="font-data-mono text-data-mono text-on-surface text-lg">Top 5%</span>
+<span class="font-body-md text-body-md text-secondary-fixed-dim text-sm mt-0.5">Madrid</span>
+</div>
+<!-- Stat 3: Mejor Noche -->
+<div class="col-span-1 glass-card rounded-xl p-4 flex flex-col justify-center items-start relative overflow-hidden">
+<span class="material-symbols-outlined text-tertiary mb-2 text-[24px]">bolt</span>
+<span class="font-caption-caps text-caption-caps text-on-surface-variant mb-1 uppercase">Mejor Noche</span>
+<span class="font-data-mono text-data-mono text-on-surface text-lg">12 Nov</span>
+<div class="flex items-center gap-1 mt-0.5">
+<span class="material-symbols-outlined text-primary text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-body-md text-body-md text-primary text-sm font-bold">9.8</span>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer Action Area -->
+<footer class="w-full px-container-padding-h pb-8 pt-4 z-50 mt-auto">
+<button class="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-inverse-primary to-tertiary-container text-white py-4 px-6 rounded-xl font-body-lg text-body-lg font-bold shadow-[0_0_24px_rgba(115,46,228,0.4)] hover:shadow-[0_0_32px_rgba(115,46,228,0.6)] hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 group">
+<span>Compartir mi mes</span>
+<span class="material-symbols-outlined text-[20px] group-hover:translate-x-1 transition-transform">ios_share</span>
+</button>
+</footer>
+</body></html>

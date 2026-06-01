@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>NightScore - Soporte</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&amp;family=Hanken+Grotesk:wght@400;500;600;700&amp;family=Geist+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary-fixed-dim": "#4cd7f6",
+                    "on-background": "#e4e1e9",
+                    "on-tertiary": "#640039",
+                    "tertiary-container": "#bf2076",
+                    "surface-container-high": "#2a292f",
+                    "on-error-container": "#ffdad6",
+                    "surface-container-lowest": "#0e0e13",
+                    "on-error": "#690005",
+                    "surface-bright": "#39383e",
+                    "surface": "#131318",
+                    "on-tertiary-container": "#ffdde7",
+                    "on-secondary": "#003640",
+                    "surface-container-low": "#1b1b20",
+                    "on-primary": "#3f008e",
+                    "outline-variant": "#4a4455",
+                    "background": "#131318",
+                    "on-tertiary-fixed": "#3e0022",
+                    "tertiary-fixed": "#ffd9e4",
+                    "primary-fixed-dim": "#d2bbff",
+                    "on-primary-fixed-variant": "#5a00c6",
+                    "inverse-surface": "#e4e1e9",
+                    "error-container": "#93000a",
+                    "on-secondary-container": "#00424e",
+                    "primary-fixed": "#eaddff",
+                    "surface-tint": "#d2bbff",
+                    "on-secondary-fixed-variant": "#004e5c",
+                    "on-primary-container": "#ede0ff",
+                    "surface-container-highest": "#35343a",
+                    "primary-container": "#7c3aed",
+                    "tertiary": "#ffb0cd",
+                    "primary": "#d2bbff",
+                    "inverse-on-surface": "#303036",
+                    "error": "#ffb4ab",
+                    "secondary-container": "#03b5d3",
+                    "on-surface-variant": "#ccc3d8",
+                    "surface-dim": "#131318",
+                    "surface-variant": "#35343a",
+                    "on-surface": "#e4e1e9",
+                    "on-secondary-fixed": "#001f26",
+                    "secondary-fixed": "#acedff",
+                    "surface-container": "#1f1f25",
+                    "on-tertiary-fixed-variant": "#8c0053",
+                    "secondary": "#4cd7f6",
+                    "outline": "#958da1",
+                    "tertiary-fixed-dim": "#ffb0cd",
+                    "on-primary-fixed": "#25005a",
+                    "inverse-primary": "#732ee4"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "inline-md": "16px",
+                    "container-padding-h": "20px",
+                    "card-gap": "12px",
+                    "section-margin": "32px",
+                    "inline-sm": "8px"
+            },
+            "fontFamily": {
+                    "headline-lg": ["Sora"],
+                    "display-hero": ["Sora"],
+                    "data-mono": ["Geist Mono"],
+                    "body-md": ["Hanken Grotesk"],
+                    "caption-caps": ["Hanken Grotesk"],
+                    "body-lg": ["Hanken Grotesk"],
+                    "headline-md": ["Sora"]
+            },
+            "fontSize": {
+                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                    "display-hero": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "data-mono": ["14px", {"lineHeight": "20px", "fontWeight": "500"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "500"}],
+                    "caption-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "600"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .glass-card {
+            background: rgba(31, 31, 37, 0.6);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .neon-glow {
+            box-shadow: 0 0 24px rgba(124, 58, 237, 0.15);
+        }
+        .btn-primary-gradient {
+            background: linear-gradient(135deg, #7c3aed 0%, #d946ef 100%);
+            box-shadow: 0 4px 15px rgba(124, 58, 237, 0.4);
+        }
+        body {
+            background-color: #131318;
+            color: #e4e1e9;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-body-md antialiased mb-24 overflow-x-hidden">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-background/60 backdrop-blur-xl border-b border-white/10 flex justify-between items-center px-container-padding-h h-16">
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-primary hover:opacity-80 transition-opacity active:scale-95 duration-200">menu</button>
+<h1 class="font-display-hero text-headline-md text-primary tracking-tighter uppercase">NIGHTSCORE</h1>
+</div>
+<div class="w-10 h-10 rounded-full border-2 border-primary overflow-hidden hover:opacity-80 transition-opacity active:scale-95 duration-200">
+<img alt="User Profile" class="w-full h-full object-cover" data-alt="A professional and sleek studio portrait of a young man with a confident expression. The lighting is dramatic with deep shadows and soft violet and cyan rim lights, reflecting a premium nightlife aesthetic. The background is a dark, out-of-focus urban setting with bokeh lights in purple and blue tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbQ3138yTIwIU6Mee1VaadpeZuMhMkx-aGx6S-NMTJHTRQRJ19WNbgPNPVvX6cBgJFIR6OD1e5UYj1cRdl3avEdf9GEQiMasNZiCkpSwh97So0LBNP25SawtF8Ld-3LOLWY80O5pw39tiA6I8hs5ObGAsm9M5ZuSBZTSgB-P_g0Lg7KUG0bykz1JCmQkczaeMVQa2mV6OHPd9BpyUMVGZ3Du5YjCJioQ4WPjRyJ-w__pmu3xUC2obNP7oms_1U3Ku5rwqLg4KCy2g"/>
+</div>
+</header>
+<main class="mt-20 px-container-padding-h space-y-section-margin">
+<!-- Search Section -->
+<section class="space-y-4">
+<h2 class="font-headline-lg text-headline-lg text-on-background">¿Cómo podemos ayudarte?</h2>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-on-surface-variant">search</span>
+<input class="w-full h-14 pl-12 pr-4 bg-surface-container-low border border-white/10 rounded-xl focus:border-primary focus:ring-1 focus:ring-primary transition-all text-on-surface outline-none placeholder:text-on-surface-variant/50" placeholder="Buscar temas, dudas o artículos..." type="text"/>
+</div>
+</section>
+<!-- Featured Categories Grid -->
+<section class="space-y-4">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-md text-headline-md text-on-background">Categorías</h3>
+</div>
+<div class="grid grid-cols-2 gap-card-gap">
+<!-- Card 1 -->
+<div class="glass-card p-4 rounded-xl flex flex-col gap-3 hover:bg-white/10 transition-colors cursor-pointer group">
+<div class="w-10 h-10 rounded-lg bg-primary/20 flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">person</span>
+</div>
+<div>
+<p class="font-body-md font-bold text-on-surface">Mi Cuenta</p>
+<p class="text-caption-caps text-[10px] text-on-surface-variant opacity-70">Perfil y seguridad</p>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="glass-card p-4 rounded-xl flex flex-col gap-3 hover:bg-white/10 transition-colors cursor-pointer group">
+<div class="w-10 h-10 rounded-lg bg-secondary-container/20 flex items-center justify-center text-secondary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">leaderboard</span>
+</div>
+<div>
+<p class="font-body-md font-bold text-on-surface">Ranking</p>
+<p class="text-caption-caps text-[10px] text-on-surface-variant opacity-70">Puntos y niveles</p>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="glass-card p-4 rounded-xl flex flex-col gap-3 hover:bg-white/10 transition-colors cursor-pointer group">
+<div class="w-10 h-10 rounded-lg bg-tertiary-container/20 flex items-center justify-center text-tertiary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">group</span>
+</div>
+<div>
+<p class="font-body-md font-bold text-on-surface">Social</p>
+<p class="text-caption-caps text-[10px] text-on-surface-variant opacity-70">Grupos y chats</p>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="glass-card p-4 rounded-xl flex flex-col gap-3 hover:bg-white/10 transition-colors cursor-pointer group">
+<div class="w-10 h-10 rounded-lg bg-error-container/20 flex items-center justify-center text-error group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">build</span>
+</div>
+<div>
+<p class="font-body-md font-bold text-on-surface">Técnico</p>
+<p class="text-caption-caps text-[10px] text-on-surface-variant opacity-70">App y errores</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Common Issues -->
+<section class="space-y-4">
+<h3 class="font-headline-md text-headline-md text-on-background">Temas Frecuentes</h3>
+<div class="space-y-card-gap">
+<div class="glass-card p-inline-md rounded-xl flex items-center justify-between active:scale-[0.98] transition-transform cursor-pointer">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-on-surface-variant">description</span>
+<span class="font-body-md text-on-surface">¿Cómo se calculan los NightPoints?</span>
+</div>
+<span class="material-symbols-outlined text-primary">chevron_right</span>
+</div>
+<div class="glass-card p-inline-md rounded-xl flex items-center justify-between active:scale-[0.98] transition-transform cursor-pointer">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-on-surface-variant">description</span>
+<span class="font-body-md text-on-surface">Recuperar acceso a mi cuenta Pro</span>
+</div>
+<span class="material-symbols-outlined text-primary">chevron_right</span>
+</div>
+<div class="glass-card p-inline-md rounded-xl flex items-center justify-between active:scale-[0.98] transition-transform cursor-pointer">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-on-surface-variant">description</span>
+<span class="font-body-md text-on-surface">Reportar comportamiento inadecuado</span>
+</div>
+<span class="material-symbols-outlined text-primary">chevron_right</span>
+</div>
+<div class="glass-card p-inline-md rounded-xl flex items-center justify-between active:scale-[0.98] transition-transform cursor-pointer">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-on-surface-variant">description</span>
+<span class="font-body-md text-on-surface">Sincronización con Spotify y Apple Music</span>
+</div>
+<span class="material-symbols-outlined text-primary">chevron_right</span>
+</div>
+</div>
+</section>
+<!-- Contact Support -->
+<section class="pb-10 space-y-6">
+<div class="text-center space-y-2">
+<h3 class="font-headline-md text-headline-md text-on-background">¿Aún necesitas ayuda?</h3>
+<p class="font-body-md text-on-surface-variant">Nuestro equipo de soporte está disponible 24/7 para usuarios Elite.</p>
+</div>
+<div class="flex flex-col gap-3">
+<button class="btn-primary-gradient w-full h-14 rounded-xl flex items-center justify-center gap-3 font-body-lg text-white active:scale-95 transition-all">
+<span class="material-symbols-outlined">forum</span>
+                    Chat en vivo
+                </button>
+<button class="w-full h-14 rounded-xl border border-secondary text-secondary flex items-center justify-center gap-3 font-body-lg hover:bg-secondary/10 active:scale-95 transition-all">
+<span class="material-symbols-outlined">mail</span>
+                    Enviar un correo
+                </button>
+</div>
+<!-- Visual Decorative Element -->
+<div class="mt-8 rounded-2xl overflow-hidden relative h-32 glass-card border-none">
+<div class="absolute inset-0 bg-gradient-to-r from-primary/20 to-transparent z-10"></div>
+<img alt="Support Visual" class="w-full h-full object-cover opacity-40" data-alt="A cinematic, high-contrast shot of a modern nightclub control booth with glowing synthesizers and mixing consoles. The environment is bathed in neon purple and cyan lighting, creating a high-energy atmosphere. Soft smoke drifts through the light beams, embodying the elite NightScore aesthetic and the technical support behind the scenes." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_Rrixp0SvhmSS0n5A6HYca0t2p4rnuRO9WZWWV1x68BXu62t-IopwK60RhpqvVn57SkGYSADOAGf3y6RZIEhWqQb5GchoOJIOroK14T5CxxoLRvZA4r-BuWlEV5oWbtoSosUxk4Uzij9xt-swxNo-4DX4hXziH8rXni-2vdYZC3A_hTcIvMkogtpHmWe1KB5LgileoE5MYmAI_ST_IxEWKg0am8JiTmTNPYujwXMaEpGPH6mc9WXeoER7IZDYWABBxFfaSfP0oj4"/>
+<div class="absolute inset-0 flex flex-col justify-center px-6 z-20">
+<p class="font-caption-caps text-primary mb-1">PROGRAMA DE EMBAJADORES</p>
+<p class="font-headline-md text-on-background text-sm">Gana puntos extra ayudando a la comunidad</p>
+</div>
+</div>
+</section>
+</main>
+<!-- NavigationDrawer Overlay (Hidden by default) -->
+<div class="fixed inset-0 bg-black/60 backdrop-blur-sm z-[60] hidden transition-opacity duration-300 opacity-0" id="drawer-overlay">
+<div class="h-full w-80 bg-surface-container-lowest rounded-r-xl shadow-2xl shadow-black flex flex-col py-8 px-6 -translate-x-full transition-transform duration-300" id="drawer-content">
+<div class="flex items-center gap-4 mb-8">
+<div class="w-12 h-12 rounded-full border-2 border-primary overflow-hidden">
+<img alt="User Name" class="w-full h-full object-cover" data-alt="A minimalist studio portrait of a stylish person with soft backlighting in deep violet. The overall aesthetic is clean, dark-mode focused, and high-end." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLiBqD2gRPVxWuctAbrCLOb7rt7CBVXuvJgIq9isPmsJfEhFi7MOuXJJ9KBexG2ZfwZaqYLPNtXy9KYdU8EjfMVk2HxZ4Tvn59B650HNULzYN5zmmmA7AOHXPWEyc9Q3tCQRzy1cIIvid5rqIxhEO5Ati6bmXrWHXerkPKvNW1Lp0_kZiT2PnD9qRtWfWXiYt5Fk0UqICDEpz9bKGXWbYikNV-x7mxI9DQXmRNBoFZNwotB78hnMScwBG8v1ZIOLnX17w9q-pkjdI"/>
+</div>
+<div>
+<h4 class="font-headline-md text-on-surface text-lg">User Name</h4>
+<p class="text-caption-caps text-primary">Rank #12 • MVP Level</p>
+</div>
+</div>
+<nav class="flex-1 space-y-2">
+<a class="flex items-center gap-4 py-4 px-4 text-on-surface hover:bg-white/5 rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined text-primary">location_on</span>
+<span class="font-body-md">Mi Ciudad</span>
+</a>
+<a class="flex items-center gap-4 py-4 px-4 text-on-surface hover:bg-white/5 rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined text-primary">public</span>
+<span class="font-body-md">Global</span>
+</a>
+<a class="flex items-center gap-4 py-4 px-4 text-on-surface hover:bg-white/5 rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined text-primary">gavel</span>
+<span class="font-body-md">Reglas de Ranking</span>
+</a>
+<a class="flex items-center gap-4 py-4 px-4 bg-primary-container/20 text-primary border-l-4 border-primary transition-colors" href="#">
+<span class="material-symbols-outlined">help</span>
+<span class="font-body-md">Soporte</span>
+</a>
+</nav>
+<div class="pt-6 border-t border-white/5 mt-auto">
+<p class="text-caption-caps text-on-surface-variant">NIGHTSCORE PRO</p>
+</div>
+</div>
+</div>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 w-full z-50 bg-surface-container/60 backdrop-blur-xl border-t border-white/5 shadow-[0_-8px_24px_rgba(124,58,237,0.15)] flex justify-around items-center h-20 px-4 pb-2 rounded-t-xl">
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary/80 active:scale-110 duration-300 ease-out" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="font-caption-caps text-caption-caps">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary/80 active:scale-110 duration-300 ease-out" href="#">
+<span class="material-symbols-outlined">leaderboard</span>
+<span class="font-caption-caps text-caption-caps">Ranking</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary/80 active:scale-110 duration-300 ease-out" href="#">
+<span class="material-symbols-outlined">local_fire_department</span>
+<span class="font-caption-caps text-caption-caps">Eventos</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary/80 active:scale-110 duration-300 ease-out" href="#">
+<span class="material-symbols-outlined">group</span>
+<span class="font-caption-caps text-caption-caps">Social</span>
+</a>
+<a class="flex flex-col items-center justify-center text-primary font-bold active:scale-110 duration-300 ease-out" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">person</span>
+<span class="font-caption-caps text-caption-caps">Perfil</span>
+</a>
+</nav>
+<script>
+        const menuBtn = document.querySelector('header button');
+        const overlay = document.getElementById('drawer-overlay');
+        const content = document.getElementById('drawer-content');
+
+        menuBtn.addEventListener('click', () => {
+            overlay.classList.remove('hidden');
+            setTimeout(() => {
+                overlay.classList.add('opacity-100');
+                content.classList.remove('-translate-x-full');
+            }, 10);
+        });
+
+        overlay.addEventListener('click', (e) => {
+            if (e.target === overlay) {
+                overlay.classList.remove('opacity-100');
+                content.classList.add('-translate-x-full');
+                setTimeout(() => {
+                    overlay.classList.add('hidden');
+                }, 300);
+            }
+        });
+
+        // Simple animation for common issues list items
+        document.querySelectorAll('.glass-card.active\\:scale-\\[0\\.98\\]').forEach(item => {
+            item.addEventListener('mouseenter', () => {
+                item.style.backgroundColor = 'rgba(255, 255, 255, 0.12)';
+            });
+            item.addEventListener('mouseleave', () => {
+                item.style.backgroundColor = 'rgba(31, 31, 37, 0.6)';
+            });
+        });
+    </script>
+</body></html>
