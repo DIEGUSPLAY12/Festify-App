@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import { Sidebar } from "@/components/layout/Sidebar";
 import { MobileNav } from "@/components/layout/MobileNav";
 import { Hero } from "@/components/sections/Hero";
@@ -25,10 +26,14 @@ export default function Home() {
           <Concept />
           <Features />
           <DesignSystemSection />
-          <DesignGallery />
+          <Suspense fallback={<div className="py-24 text-center">Cargando Galería...</div>}>
+            <DesignGallery />
+          </Suspense>
           <TechStack />
           <Architecture />
-          <DataModel />
+          <Suspense fallback={<div className="py-24 text-center">Cargando Modelo de Datos...</div>}>
+            <DataModel />
+          </Suspense>
           <ApiReference />
           <Pricing />
           <Roadmap />
