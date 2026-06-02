@@ -115,8 +115,8 @@ export function MockupModal() {
             </button>
 
             {/* Phone Frame Grande */}
-            <div className="h-full w-full flex items-center justify-center max-h-[80vh]">
-              <PhoneFrame screen={screen} priority className="h-full max-h-full w-auto" />
+            <div className="h-full w-full flex items-start justify-center overflow-y-auto custom-scrollbar pt-12 pb-32">
+              <PhoneFrame screen={screen} priority className="w-[85%] sm:w-[320px] lg:w-[360px] h-auto" />
             </div>
 
             {/* Contador y Dots */}

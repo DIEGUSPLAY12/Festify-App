@@ -12,7 +12,7 @@ const FLOW_PHASES = [
     id: "fase1",
     name: "Primer contacto",
     color: "#7C3AED", // violeta
-    screenIds: ["ns-01-splash", "ns-02a-onboarding", "ns-02b-onboarding", "ns-02c-onboarding", "ns-03-age-verification", "ns-04-register", "ns-06-profile-setup"]
+    screenIds: ["ns-02a-onboarding", "ns-02b-onboarding", "ns-02c-onboarding", "ns-03-age-verification", "ns-04-register", "ns-06-profile-setup"]
   },
   {
     id: "fase2",

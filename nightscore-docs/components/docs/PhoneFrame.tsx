@@ -18,8 +18,7 @@ export function PhoneFrame({ screen, className, priority = false }: PhoneFramePr
   return (
     <div
       className={cn(
-        "relative mx-auto bg-[#1C1C1E] rounded-[38px] p-[12px] border-[3px] border-[#2C2C2E] shadow-xl shrink-0 overflow-hidden group/phone transition-colors duration-300",
-        isRecap ? "aspect-[9/16]" : "aspect-[9/19.5]",
+        "relative mx-auto bg-[#1C1C1E] rounded-[38px] p-[12px] border-[3px] border-[#2C2C2E] shadow-xl shrink-0 group/phone transition-colors duration-300 w-full h-auto",
         className
       )}
     >
@@ -34,7 +33,7 @@ export function PhoneFrame({ screen, className, priority = false }: PhoneFramePr
       )}
 
       {/* Pantalla interior */}
-      <div className="relative w-full h-full bg-black rounded-[24px] overflow-hidden">
+      <div className="relative w-full h-auto min-h-[500px] bg-black rounded-[24px] overflow-hidden">
         
         {/* Dynamic Island (sólo para 9/19.5) */}
         {!isRecap && (
@@ -56,8 +55,10 @@ export function PhoneFrame({ screen, className, priority = false }: PhoneFramePr
           <Image
             src={`${process.env.NODE_ENV === "production" ? "/Festify-App" : ""}${screen.imagePath}`}
             alt={screen.name}
-            fill
-            className="object-cover transition-transform duration-500"
+            width={1080}
+            height={2400}
+            className="w-full h-auto block object-cover transition-transform duration-500"
+            style={{ width: "100%", height: "auto" }}
             priority={priority}
             onError={() => setHasError(true)}
             sizes="(max-width: 768px) 50vw, (max-width: 1200px) 25vw, 20vw"

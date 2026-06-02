@@ -39,11 +39,6 @@ export type MockupBlock = {
 
 const screensOnboarding: MockupScreen[] = [
   {
-    id: "ns-01-splash", code: "NS-01", name: "Splash Screen",
-    description: "Pantalla de carga inicial con el imagotipo de NightScore.",
-    imagePath: "/gallery/ns_01_splash_screen_optimized.png", block: "onboarding", aspectRatio: "9/19.5", tags: ["branding", "onboarding"], isKeyScreen: true
-  },
-  {
     id: "ns-02a-onboarding", code: "NS-02a", name: "Onboarding Welcome",
     description: "Diapositiva introductoria explicando la propuesta de valor social.",
     imagePath: "/gallery/ns_02_welcome_onboarding_optimized.png", block: "onboarding", aspectRatio: "9/19.5", tags: ["onboarding"], isKeyScreen: false
