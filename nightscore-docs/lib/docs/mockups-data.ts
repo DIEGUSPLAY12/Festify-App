@@ -85,7 +85,7 @@ const screensNavigation: MockupScreen[] = [
   {
     id: "ns-07-bottom-nav", code: "NS-07", name: "Bottom Navigation Bar",
     description: "La barra de navegación principal persistente de la aplicación.",
-    imagePath: "/mockups/ns-07-bottom-nav.png", block: "navigation", aspectRatio: "9/19.5", tags: ["navigation"], isKeyScreen: true
+    imagePath: "/gallery/ns_07_barra_de_navegaci_n_festify.png", block: "navigation", aspectRatio: "9/19.5", tags: ["navigation"], isKeyScreen: true
   }
 ];
 
@@ -156,7 +156,7 @@ const screensGrupos: MockupScreen[] = [
   {
     id: "ns-19-invite-members", code: "NS-19", name: "Invitar miembros",
     description: "Interfaz para buscar y añadir amigos a un grupo existente mediante un enlace o invitación directa.",
-    imagePath: "/mockups/ns-19-invite-members.png", block: "grupos", aspectRatio: "9/19.5", tags: ["social"], isKeyScreen: false
+    imagePath: "/gallery/ns_18_crear_grupo.png", block: "grupos", aspectRatio: "9/19.5", tags: ["social"], isKeyScreen: false
   }
 ];
 
