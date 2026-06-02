@@ -145,8 +145,6 @@ const screensLogros: MockupScreen[] = [
   }
 ];
 
-const screensEstadisticas: MockupScreen[] = [];
-
 const screensRecap: MockupScreen[] = [
   {
     id: "ns-30-recap", code: "NS-30", name: "Recap Cover",
@@ -237,15 +235,6 @@ export const MOCKUP_BLOCKS: MockupBlock[] = [
     color: "#EC4899",
     icon: "🎖",
     screens: screensLogros
-  },
-  {
-    id: "estadisticas",
-    code: "BLOQUE 7",
-    name: "Estadísticas",
-    description: "Visualización de datos de consumo y hábitos.",
-    color: "#06B6D4",
-    icon: "📊",
-    screens: screensEstadisticas
   },
   {
     id: "recap",
