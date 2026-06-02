@@ -9,7 +9,8 @@ const SECTIONS = [
   { id: "hero", label: "Inicio" },
   { id: "concept", label: "Concepto" },
   { id: "features", label: "Funcionalidades" },
-  { id: "screens", label: "Pantallas" },
+  { id: "design-system", label: "Design System" },
+  { id: "gallery", label: "Galería de Diseños" },
   { id: "tech", label: "Stack Tecnológico" },
   { id: "api", label: "Referencia API" },
   { id: "pricing", label: "Modelo de Negocio" }

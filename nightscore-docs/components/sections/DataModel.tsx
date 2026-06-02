@@ -5,7 +5,6 @@ import { useRouter, useSearchParams } from "next/navigation";
 import { motion } from "framer-motion";
 import { Database, Layers, Settings, Zap } from "lucide-react";
 import { DATABASE_STATS, TABLES } from "@/lib/docs/database-schema";
-import { DatabaseDiagram } from "@/components/docs/DatabaseDiagram";
 import { DomainCards } from "@/components/docs/DomainCards";
 import { TableExplorer } from "@/components/docs/TableExplorer";
 import { TableDetail } from "@/components/docs/TableDetail";
@@ -75,10 +74,7 @@ export function DataModel() {
           </div>
         </div>
 
-        {/* PARTE 2: Diagrama ERD */}
-        <div className="mb-24">
-          <DatabaseDiagram />
-        </div>
+        {/* PARTE 2: Diagrama ERD removido */}
 
         {/* PARTE 3: Dominios Funcionales */}
         <div className="mb-24">

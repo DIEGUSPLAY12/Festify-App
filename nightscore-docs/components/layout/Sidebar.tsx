@@ -8,6 +8,7 @@ const SECTIONS = [
   { id: "hero", label: "Inicio" },
   { id: "concept", label: "Concepto" },
   { id: "features", label: "Funcionalidades" },
+  { id: "design-system", label: "Design System" },
   { id: "gallery", label: "Galería de Diseños" },
   { id: "tech", label: "Stack Tecnológico" },
   { id: "architecture", label: "Arquitectura" },

@@ -3,6 +3,7 @@ import { MobileNav } from "@/components/layout/MobileNav";
 import { Hero } from "@/components/sections/Hero";
 import { Concept } from "@/components/sections/Concept";
 import { Features } from "@/components/sections/Features";
+import { DesignSystemSection } from "@/components/sections/DesignSystemSection";
 import { DesignGallery } from "@/components/sections/DesignGallery";
 import { TechStack } from "@/components/sections/TechStack";
 import { Architecture } from "@/components/sections/Architecture";
@@ -23,6 +24,7 @@ export default function Home() {
           <Hero />
           <Concept />
           <Features />
+          <DesignSystemSection />
           <DesignGallery />
           <TechStack />
           <Architecture />
