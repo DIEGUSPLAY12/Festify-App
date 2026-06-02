@@ -24,13 +24,13 @@ const FLOW_PHASES = [
     id: "fase3",
     name: "Vida social",
     color: "#06B6D4", // cian
-    screenIds: ["ns-15-group-list", "ns-16-group-feed", "ns-17-group-chat", "ns-20-group-ranking", "ns-22-mvp-vote", "ns-23-mvp-result"]
+    screenIds: ["ns-15-group-list", "ns-16-group-feed", "ns-17-group-chat", "ns-22-mvp-vote", "ns-23-mvp-result"]
   },
   {
     id: "fase4",
     name: "Mi espacio",
     color: "#F59E0B", // ámbar
-    screenIds: ["ns-24-my-profile", "ns-27-achievements", "ns-29-stats", "ns-30a-recap"]
+    screenIds: ["ns-24-my-profile", "ns-27-achievements", "ns-30a-recap"]
   }
 ];
 

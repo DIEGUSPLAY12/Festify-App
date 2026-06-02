@@ -121,11 +121,6 @@ const screensGrupos: MockupScreen[] = [
 
 const screensRanking: MockupScreen[] = [
   {
-    id: "ns-20-group-ranking", code: "NS-20", name: "Ranking del grupo",
-    description: "Tabla de clasificación interna del grupo, comparando la puntuación NightScore de sus miembros.",
-    imagePath: "/gallery/ns_20_ranking_de_grupo_optimized.png", block: "ranking", aspectRatio: "9/19.5", tags: ["gamification", "social"], isKeyScreen: true
-  },
-  {
     id: "ns-21-global-ranking", code: "NS-21", name: "Ranking global",
     description: "El top absoluto de usuarios en toda la plataforma según su NightScore.",
     imagePath: "/gallery/ns_21_ranking_global_y_ciudad_optimized.png", block: "ranking", aspectRatio: "9/19.5", tags: ["gamification"], isKeyScreen: false
@@ -150,13 +145,7 @@ const screensLogros: MockupScreen[] = [
   }
 ];
 
-const screensEstadisticas: MockupScreen[] = [
-  {
-    id: "ns-29-stats", code: "NS-29", name: "Mis estadísticas",
-    description: "Análisis gráfico y desglosado de los consumos, tipos de fiesta y horarios históricos del usuario.",
-    imagePath: "/gallery/ns_29_personal_stats_optimized.png", block: "estadisticas", aspectRatio: "9/19.5", tags: ["analytics", "profile"], isKeyScreen: true
-  }
-];
+const screensEstadisticas: MockupScreen[] = [];
 
 const screensRecap: MockupScreen[] = [
   {
