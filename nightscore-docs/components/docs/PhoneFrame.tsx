@@ -54,7 +54,7 @@ export function PhoneFrame({ screen, className, priority = false }: PhoneFramePr
           </div>
         ) : (
           <Image
-            src={screen.imagePath}
+            src={`${process.env.NODE_ENV === "production" ? "/Festify-App" : ""}${screen.imagePath}`}
             alt={screen.name}
             fill
             className="object-cover transition-transform duration-500"

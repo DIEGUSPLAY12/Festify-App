@@ -217,7 +217,7 @@ export function MockupModal() {
                       style={s.id === screen.id ? { '--tw-ring-color': block.color } as React.CSSProperties : {}}
                     >
                       <Image
-                        src={s.imagePath}
+                        src={`${process.env.NODE_ENV === "production" ? "/Festify-App" : ""}${s.imagePath}`}
                         alt={s.name}
                         fill
                         className="object-cover"
