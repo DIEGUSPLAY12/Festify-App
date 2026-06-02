@@ -122,7 +122,7 @@ const screensGrupos: MockupScreen[] = [
 const screensRanking: MockupScreen[] = [
   {
     id: "ns-21-global-ranking", code: "NS-21", name: "Ranking global",
-    description: "El top absoluto de usuarios en toda la plataforma según su NightScore.",
+    description: "El top absoluto de usuarios en toda la plataforma según su Festify.",
     imagePath: "/gallery/ns_21_ranking_global_y_ciudad_optimized.png", block: "ranking", aspectRatio: "9/19.5", tags: ["gamification"], isKeyScreen: false
   }
 ];
@@ -222,7 +222,7 @@ export const MOCKUP_BLOCKS: MockupBlock[] = [
     id: "ranking",
     code: "BLOQUE 5",
     name: "Ranking",
-    description: "Tablas de clasificación basadas en NightScore.",
+    description: "Tablas de clasificación basadas en Festify.",
     color: "#F59E0B",
     icon: "🏆",
     screens: screensRanking

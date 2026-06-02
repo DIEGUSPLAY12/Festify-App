@@ -25,7 +25,7 @@ export function DesignGallery() {
             </span>
           </div>
           <p className="text-lg text-ns-muted leading-relaxed mb-8">
-            Explora el diseño completo de NightScore pantalla por pantalla. Haz clic en cualquier miniatura para verla en detalle.
+            Explora el diseño completo de Festify pantalla por pantalla. Haz clic en cualquier miniatura para verla en detalle.
           </p>
 
           <div className="flex flex-wrap gap-3 mb-12">
@@ -107,7 +107,7 @@ export function DesignGallery() {
           <div className="bg-[#13131A] rounded-3xl p-6 lg:p-8 border border-[rgba(255,255,255,0.05)]">
             <h4 className="text-xl font-display font-bold text-white mb-6">Nomenclatura de pantallas</h4>
             <p className="text-ns-muted mb-6 leading-relaxed">
-              El sistema de nombres <strong>NS-XX</strong> facilita la comunicación técnica: "NS" por NightScore, seguido del número secuencial de la pantalla. Si existen subvariantes, se añade una letra alfabética (a, b, c).
+              El sistema de nombres <strong>NS-XX</strong> facilita la comunicación técnica: "NS" por Festify, seguido del número secuencial de la pantalla. Si existen subvariantes, se añade una letra alfabética (a, b, c).
             </p>
             <div className="bg-[#1A1A2E] rounded-2xl p-6 font-mono text-center flex items-center justify-center gap-2 text-2xl">
               <span className="text-ns-fuchsia">[NS]</span>

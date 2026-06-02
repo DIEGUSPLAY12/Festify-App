@@ -21,7 +21,7 @@ export function Hero() {
             transition={{ duration: 0.6 }}
           >
             <span className="inline-block py-1 px-3 rounded-full bg-[rgba(255,255,255,0.05)] border border-[rgba(255,255,255,0.1)] text-ns-cyan text-sm font-semibold tracking-wider mb-6">
-              NightScore App & API Docs
+              Festify App & API Docs
             </span>
             <h1 className="text-5xl sm:text-6xl md:text-7xl font-display font-extrabold text-white leading-tight tracking-tight mb-6">
               Tu noche.<br />
@@ -60,7 +60,7 @@ export function Hero() {
             {/* Phone Content Mockup */}
             <div className="absolute inset-0 bg-[rgba(19,19,26,1)] flex flex-col p-4 pt-10 relative">
               <div className="flex justify-between items-center mb-6">
-                <div className="font-display font-bold text-lg">NightScore</div>
+                <div className="font-display font-bold text-lg">Festify</div>
                 <div className="w-8 h-8 rounded-full bg-gradient-to-r from-ns-violet to-ns-fuchsia flex items-center justify-center text-xs font-bold">JD</div>
               </div>
               

@@ -2,7 +2,7 @@ export const achievementsData = [
   {
     id: "first-night",
     title: "Primera noche",
-    description: "Registraste tu primera noche de fiesta en NightScore.",
+    description: "Registraste tu primera noche de fiesta en Festify.",
     icon: "Moon",
     color: "from-blue-500 to-indigo-500"
   },

@@ -37,10 +37,10 @@ export function Concept() {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-3xl md:text-5xl font-display font-bold text-white mb-6">
-            ¿Qué es <span className="text-gradient">NightScore</span>?
+            ¿Qué es <span className="text-gradient">Festify</span>?
           </h2>
           <p className="text-lg text-ns-muted leading-relaxed">
-            NightScore convierte cada salida en una experiencia compartida. Es el diario de tus noches de fiesta, mezclado con la competitividad sana de un videojuego y el formato social de tus apps favoritas.
+            Festify convierte cada salida en una experiencia compartida. Es el diario de tus noches de fiesta, mezclado con la competitividad sana de un videojuego y el formato social de tus apps favoritas.
           </p>
         </motion.div>
 

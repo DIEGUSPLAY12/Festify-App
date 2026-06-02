@@ -16,7 +16,7 @@ export function DesignSystemSection() {
           Design System
         </h2>
         <p className="text-lg text-ns-muted leading-relaxed max-w-3xl mb-8">
-          Una guía de estilos limpia y directa con los tokens principales de NightScore.
+          Una guía de estilos limpia y directa con los tokens principales de Festify.
         </p>
         
         <div className="flex flex-wrap gap-4">

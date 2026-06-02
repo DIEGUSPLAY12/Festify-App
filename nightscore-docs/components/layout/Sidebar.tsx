@@ -40,7 +40,7 @@ export function Sidebar() {
         <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-ns-violet to-ns-fuchsia flex items-center justify-center text-white font-bold font-display">
           N
         </div>
-        <span className="font-display font-bold text-xl text-white tracking-tight">NightScore</span>
+        <span className="font-display font-bold text-xl text-white tracking-tight">Festify</span>
       </div>
 
       <nav className="space-y-1">

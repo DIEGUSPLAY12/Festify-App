@@ -46,7 +46,7 @@ export function DataModel() {
             </span>
           </div>
           <p className="text-lg text-ns-muted leading-relaxed max-w-3xl mb-12">
-            NightScore utiliza un modelo de datos relacional altamente optimizado y escalable. Diseñado para soportar alta concurrencia durante las noches de fiesta, se apoya en PostgreSQL como fuente de verdad y en Redis como capa de caché ultrarrápida para los rankings y recaps en tiempo real.
+            Festify utiliza un modelo de datos relacional altamente optimizado y escalable. Diseñado para soportar alta concurrencia durante las noches de fiesta, se apoya en PostgreSQL como fuente de verdad y en Redis como capa de caché ultrarrápida para los rankings y recaps en tiempo real.
           </p>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">

@@ -50,7 +50,7 @@ export function MobileNav() {
           <div className="w-6 h-6 rounded bg-gradient-to-br from-ns-violet to-ns-fuchsia flex items-center justify-center text-white font-bold font-display text-xs">
             N
           </div>
-          <span className="font-display font-bold text-lg text-white tracking-tight">NightScore</span>
+          <span className="font-display font-bold text-lg text-white tracking-tight">Festify</span>
         </div>
         <button onClick={() => setIsOpen(true)} className="p-2 text-white">
           <Menu className="w-6 h-6" />
