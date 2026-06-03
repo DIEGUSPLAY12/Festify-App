@@ -75,7 +75,7 @@ const screensFeed: MockupScreen[] = [
 
 const screensRegistro: MockupScreen[] = [
   {
-    id: "ns-11-step-photos", code: "NS-11", name: "Cámara Festify",
+    id: "ns-11-step-photos", code: "NS-11", name: "Cámara NightRank",
     description: "Selección de fotos de la galería o cámara para adjuntar al registro de la noche.",
     imagePath: "/gallery/ns_11_c_mara_festify_profesionalizada.png", block: "registro", aspectRatio: "9/19.5", tags: ["registration", "content"], isKeyScreen: true
   },
@@ -122,7 +122,7 @@ const screensGrupos: MockupScreen[] = [
 const screensRanking: MockupScreen[] = [
   {
     id: "ns-21-global-ranking", code: "NS-21", name: "Ranking global",
-    description: "El top absoluto de usuarios en toda la plataforma según su Festify.",
+    description: "El top absoluto de usuarios en toda la plataforma según su NightRank.",
     imagePath: "/gallery/ns_21_ranking_global_y_ciudad_optimized.png", block: "ranking", aspectRatio: "9/19.5", tags: ["gamification"], isKeyScreen: false
   }
 ];
@@ -222,7 +222,7 @@ export const MOCKUP_BLOCKS: MockupBlock[] = [
     id: "ranking",
     code: "BLOQUE 5",
     name: "Ranking",
-    description: "Tablas de clasificación basadas en Festify.",
+    description: "Tablas de clasificación basadas en NightRank.",
     color: "#F59E0B",
     icon: "🏆",
     screens: screensRanking

@@ -48,7 +48,7 @@ export function SplashMockup() {
         
         {/* Typography Cluster */}
         <div className="flex flex-col items-center text-center space-y-4">
-          <h1 className="font-display-hero text-display-hero gradient-text tracking-tighter">Festify</h1>
+          <h1 className="font-display-hero text-display-hero gradient-text tracking-tighter">NightRank</h1>
           <p className="font-body-lg text-body-lg text-on-surface-variant max-w-[280px]">
             Tu noche. Tu historia. Tu score.
           </p>

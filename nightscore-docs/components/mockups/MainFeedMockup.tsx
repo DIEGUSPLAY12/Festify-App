@@ -16,7 +16,7 @@ export function MainFeedMockup() {
       {/* TopAppBar */}
       <header className="sticky top-0 w-full z-50 bg-background/80 backdrop-blur-lg border-b border-white/5 flex justify-between items-center px-4 h-14 shrink-0 rounded-t-[2.5rem]">
         <div className="flex items-center gap-2 text-primary">
-          <div className="font-headline-lg text-[20px] font-bold bg-gradient-to-r from-primary to-tertiary bg-clip-text text-transparent">Festify</div>
+          <div className="font-headline-lg text-[20px] font-bold bg-gradient-to-r from-primary to-tertiary bg-clip-text text-transparent">NightRank</div>
         </div>
         <div className="relative text-on-surface cursor-pointer">
           <span className="material-symbols-outlined text-[20px]">notifications</span>

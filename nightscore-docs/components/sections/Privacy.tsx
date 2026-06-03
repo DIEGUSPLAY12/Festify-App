@@ -29,7 +29,7 @@ export function Privacy() {
                 <h2 className="text-2xl md:text-3xl font-display font-bold text-white">Privacidad y Seguridad</h2>
               </div>
               <p className="text-ns-muted mb-6">
-                Festify cumple íntegramente con el RGPD. Tu información personal y los detalles de tus salidas son privados por defecto. Tú decides qué compartes y con quién.
+                NightRank cumple íntegramente con el RGPD. Tu información personal y los detalles de tus salidas son privados por defecto. Tú decides qué compartes y con quién.
               </p>
               
               <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4">

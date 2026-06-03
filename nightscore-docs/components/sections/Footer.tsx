@@ -8,7 +8,7 @@ export function Footer() {
         <div className="container flex items-center justify-center gap-3 text-amber-500/90 max-w-3xl mx-auto">
           <GlassWater className="w-5 h-5 shrink-0" />
           <p className="text-sm font-medium leading-tight">
-            Festify promueve el disfrute responsable. Recuerda que los rankings de diversión, MVPs y salidas tienen tanto valor como cualquier otra estadística.
+            NightRank promueve el disfrute responsable. Recuerda que los rankings de diversión, MVPs y salidas tienen tanto valor como cualquier otra estadística.
           </p>
         </div>
       </div>
@@ -20,7 +20,7 @@ export function Footer() {
               N
             </div>
             <div>
-              <span className="font-display font-bold text-lg text-white tracking-tight block">Festify</span>
+              <span className="font-display font-bold text-lg text-white tracking-tight block">NightRank</span>
               <span className="text-xs text-ns-muted">Tu noche, tu historia, tu score.</span>
             </div>
           </div>
@@ -46,7 +46,7 @@ export function Footer() {
 
         <div className="mt-8 pt-8 border-t border-[rgba(255,255,255,0.05)] text-center text-xs text-ns-muted">
           <p>Hecho con 🖤 para las noches que no se olvidan.</p>
-          <p className="mt-1">&copy; {new Date().getFullYear()} Festify. Todos los derechos reservados.</p>
+          <p className="mt-1">&copy; {new Date().getFullYear()} NightRank. Todos los derechos reservados.</p>
         </div>
       </div>
     </footer>

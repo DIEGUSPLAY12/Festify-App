@@ -5,8 +5,8 @@ import { CommandPalette } from "@/components/ui/CommandPalette";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Festify | Tu noche. Tu historia. Tu score.",
-  description: "Documentación oficial de Festify, la plataforma que gamifica tus noches y salidas con amigos.",
+  title: "NightRank | Tu noche. Tu historia. Tu score.",
+  description: "Documentación oficial de NightRank, la plataforma que gamifica tus noches y salidas con amigos.",
 };
 
 export default function RootLayout({

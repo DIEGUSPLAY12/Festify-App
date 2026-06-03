@@ -151,7 +151,7 @@ export function Features() {
                           ))}
                         </div>
                         <div className="w-48 h-80 rounded-2xl bg-gradient-to-b from-[rgba(124,58,237,0.2)] to-[rgba(19,19,26,1)] border border-[rgba(255,255,255,0.1)] flex flex-col p-4 shadow-[0_0_30px_rgba(236,72,153,0.15)] shrink-0">
-                          <div className="text-[10px] text-ns-muted uppercase tracking-widest mb-4">Festify Wrapped</div>
+                          <div className="text-[10px] text-ns-muted uppercase tracking-widest mb-4 relative z-10">NightRank Wrapped</div>
                           <div className="text-3xl font-display font-bold text-white leading-tight mb-auto">Fuiste el<br/><span className="text-gradient">MVP</span><br/>del mes</div>
                           <button className="w-full py-2 bg-white/10 rounded-lg text-xs font-semibold hover:bg-white/20 transition-colors">Compartir</button>
                         </div>
