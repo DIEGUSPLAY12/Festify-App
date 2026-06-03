@@ -49,9 +49,9 @@ const screensOnboarding: MockupScreen[] = [
     imagePath: "/gallery/ns_03_age_verification_optimized.png", block: "onboarding", aspectRatio: "9/19.5", tags: ["auth", "onboarding"], isKeyScreen: false
   },
   {
-    id: "ns-05-login", code: "NS-05", name: "Inicio de sesión",
-    description: "Pantalla de login para usuarios existentes.",
-    imagePath: "/gallery/ns_05_login_optimized.png", block: "onboarding", aspectRatio: "9/19.5", tags: ["auth"], isKeyScreen: false
+    id: "ns-04-login-register", code: "NS-04", name: "Inicio de sesión / Registro",
+    description: "Pantalla única para autenticación y creación de nueva cuenta.",
+    imagePath: "/gallery/ns_04_login_register.png", block: "onboarding", tags: ["auth"], isKeyScreen: false
   },
   {
     id: "ns-06-profile-setup", code: "NS-06", name: "Configuración de perfil",
