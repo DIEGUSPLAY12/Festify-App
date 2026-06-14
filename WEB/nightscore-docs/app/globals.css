@@ -202,6 +202,75 @@ body {
     text-align: center;
     padding: 48px 24px;
   }
+
+  /* Subtle dot grid for section backgrounds */
+  .bg-grid {
+    background-image:
+      linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+    background-size: 44px 44px;
+    background-position: -1px -1px;
+  }
+
+  /* Dot pattern for hero */
+  .bg-dots {
+    background-image: radial-gradient(circle, rgba(255,255,255,0.08) 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+
+  /* Enhanced glass for sidebar / nav */
+  .glass-strong {
+    background-color: rgba(10, 10, 15, 0.75);
+    backdrop-filter: blur(20px) saturate(150%);
+    -webkit-backdrop-filter: blur(20px) saturate(150%);
+    border-right: 1px solid rgba(255, 255, 255, 0.06);
+  }
+
+  /* Card highlight line — top gradient accent */
+  .card-accent-top {
+    position: relative;
+  }
+  .card-accent-top::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(124,58,237,0.6), rgba(236,72,153,0.4), transparent);
+    border-radius: 10px 10px 0 0;
+    opacity: 0;
+    transition: opacity 200ms var(--ease-standard);
+  }
+  .card-accent-top:hover::before {
+    opacity: 1;
+  }
+
+  /* Glow ring for phone mockup */
+  .phone-glow {
+    box-shadow:
+      0 0 0 1px rgba(255,255,255,0.08),
+      0 40px 80px rgba(0,0,0,0.6),
+      0 0 60px rgba(124,58,237,0.2),
+      inset 0 0 0 1px rgba(255,255,255,0.04);
+  }
+
+  /* Section number accent */
+  .section-number {
+    font-family: var(--font-display);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--color-ns-violet);
+  }
+
+  /* Stat divider strip */
+  .stat-strip {
+    border-top: 1px solid rgba(255,255,255,0.06);
+    padding-top: 20px;
+    margin-top: 20px;
+  }
 }
 
 /* =====================================================
