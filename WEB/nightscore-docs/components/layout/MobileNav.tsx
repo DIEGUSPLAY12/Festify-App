@@ -20,7 +20,14 @@ const SECTION_IDS = SECTIONS.map(s => s.id);
 
 export function MobileNav() {
   const [isOpen, setIsOpen] = React.useState(false);
+  const [scrolled, setScrolled] = React.useState(false);
   const activeSection = useActiveSection(SECTION_IDS);
+
+  React.useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 8);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   React.useEffect(() => {
     if (isOpen) {
@@ -45,7 +52,10 @@ export function MobileNav() {
 
   return (
     <>
-      <div className="lg:hidden fixed top-0 left-0 right-0 z-40 bg-[rgba(10,10,15,0.8)] backdrop-blur-md border-b border-[rgba(255,255,255,0.05)] px-4 py-3 flex items-center justify-between">
+      <div className={cn(
+        "lg:hidden fixed top-0 left-0 right-0 z-40 bg-[rgba(10,10,15,0.8)] backdrop-blur-md border-b border-[rgba(255,255,255,0.05)] px-4 py-3 flex items-center justify-between transition-shadow duration-[200ms]",
+        scrolled && "header-scrolled"
+      )}>
         <div className="flex items-center gap-2 cursor-pointer" onClick={() => scrollTo("hero")}>
           <div className="w-6 h-6 rounded bg-gradient-to-br from-ns-violet to-ns-fuchsia flex items-center justify-center text-white font-bold font-display text-xs">
             N

@@ -7,12 +7,12 @@ export interface GradientButtonProps extends React.ButtonHTMLAttributes<HTMLButt
 
 export const GradientButton = React.forwardRef<HTMLButtonElement, GradientButtonProps>(
   ({ className, variant = "primary", children, ...props }, ref) => {
-    const baseStyles = "relative inline-flex items-center justify-center font-medium transition-all duration-300 rounded-full px-6 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-ns-violet focus:ring-offset-2 focus:ring-offset-ns-bg overflow-hidden";
-    
+    const baseStyles = "relative inline-flex items-center justify-center font-medium rounded-full px-6 py-3 min-h-[40px] text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ns-violet focus-visible:ring-offset-2 focus-visible:ring-offset-ns-bg overflow-hidden transition-[transform,box-shadow,border-color,background-color] duration-[150ms]";
+
     const variants = {
-      primary: "bg-gradient-to-r from-ns-violet to-ns-fuchsia text-white hover:scale-105 hover:shadow-[0_0_20px_rgba(124,58,237,0.5)]",
-      ghost: "text-ns-text hover:text-white bg-transparent hover:bg-[rgba(255,255,255,0.05)]",
-      outline: "border border-[rgba(255,255,255,0.1)] text-ns-text hover:border-[rgba(124,58,237,0.5)] hover:text-white hover:shadow-[0_0_15px_rgba(124,58,237,0.3)] bg-transparent",
+      primary: "bg-gradient-to-r from-ns-violet to-ns-fuchsia text-white hover:-translate-y-px hover:shadow-[0_0_20px_rgba(124,58,237,0.5)] active:translate-y-0 active:shadow-none",
+      ghost: "text-ns-text hover:text-white bg-transparent hover:-translate-y-px hover:bg-[rgba(255,255,255,0.05)] active:translate-y-0",
+      outline: "border border-[rgba(255,255,255,0.1)] text-ns-text hover:border-[rgba(124,58,237,0.5)] hover:text-white hover:-translate-y-px hover:shadow-[0_0_15px_rgba(124,58,237,0.3)] active:translate-y-0 active:shadow-none bg-transparent",
     };
 
     return (

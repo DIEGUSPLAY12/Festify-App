@@ -1,6 +1,5 @@
 "use client";
 
-import * as React from "react";
 import { useActiveSection } from "@/hooks/useActiveSection";
 import { cn } from "@/lib/utils";
 
@@ -49,14 +48,14 @@ export function Sidebar() {
             key={section.id}
             onClick={() => scrollTo(section.id)}
             className={cn(
-              "block w-full text-left px-4 py-2.5 rounded-lg text-sm font-medium transition-all duration-300 relative overflow-hidden",
-              activeSection === section.id 
-                ? "text-white bg-[rgba(124,58,237,0.1)]" 
+              "block w-full text-left px-4 py-2.5 rounded-[6px] text-sm font-medium transition-[background-color,color] duration-[150ms] relative overflow-hidden",
+              activeSection === section.id
+                ? "text-white bg-[rgba(124,58,237,0.1)]"
                 : "text-ns-muted hover:text-white hover:bg-[rgba(255,255,255,0.05)]"
             )}
           >
             {activeSection === section.id && (
-              <span className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-ns-violet to-ns-fuchsia" />
+              <span className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-ns-violet to-ns-fuchsia animate-scale-y-in" />
             )}
             <span className={cn("relative z-10", activeSection === section.id && "text-gradient")}>
               {section.label}

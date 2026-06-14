@@ -134,7 +134,7 @@ body {
   .text-caption-caps { font-size: 12px; line-height: 16px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; }
   .text-data-mono { font-size: 14px; line-height: 20px; font-weight: 500; }
   .text-body-lg { font-size: 18px; line-height: 28px; font-weight: 600; }
-  
+
   .font-body-md { font-family: 'Hanken Grotesk', sans-serif; }
   .font-headline-md { font-family: 'Sora', sans-serif; }
   .font-headline-lg { font-family: 'Sora', sans-serif; }
@@ -142,7 +142,7 @@ body {
   .font-caption-caps { font-family: 'Hanken Grotesk', sans-serif; }
   .font-data-mono { font-family: 'Geist Mono', monospace; }
   .font-body-lg { font-family: 'Hanken Grotesk', sans-serif; }
-  
+
   .material-symbols-outlined {
     font-family: 'Material Symbols Outlined';
     font-weight: normal;
@@ -157,6 +157,203 @@ body {
     direction: ltr;
     -webkit-font-feature-settings: 'liga';
     -webkit-font-smoothing: antialiased;
+  }
+
+  /* Scrollbar hide */
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Header state when scrolled */
+  .header-scrolled {
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  /* Enterprise typography scale */
+  .text-page-title    { font-size: 28px; font-weight: 700; letter-spacing: -0.5px; line-height: 1.25; }
+  .text-section-title { font-size: 20px; font-weight: 600; letter-spacing: -0.25px; line-height: 1.3; }
+  .text-card-title    { font-size: 16px; font-weight: 600; line-height: 1.4; }
+  .text-body-large    { font-size: 15px; font-weight: 400; line-height: 1.6; }
+  .text-body-regular  { font-size: 14px; font-weight: 400; line-height: 1.5; }
+  .text-body-small    { font-size: 13px; font-weight: 400; line-height: 1.5; }
+  .text-label         { font-size: 12px; font-weight: 500; letter-spacing: 0.4px; line-height: 1.4; }
+  .text-code-id       { font-size: 11px; font-weight: 700; font-family: monospace; line-height: 1.4; }
+
+  /* Toast container */
+  .toast-container {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  /* Empty state layout */
+  .empty-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 48px 24px;
+  }
+}
+
+/* =====================================================
+   DESIGN TOKENS
+   ===================================================== */
+:root {
+  /* Animation timing */
+  --duration-fast:   150ms;
+  --duration-base:   200ms;
+  --duration-slow:   300ms;
+  --ease-standard:   cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-enter:      cubic-bezier(0.0, 0, 0.2, 1);
+  --ease-exit:       cubic-bezier(0.4, 0, 1, 1);
+
+  /* Shadow levels */
+  --shadow-rest:     0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+  --shadow-hover:    0 4px 16px rgba(0,0,0,0.08), 0 2px 4px rgba(0,0,0,0.04);
+  --shadow-modal:    0 20px 60px rgba(0,0,0,0.15), 0 8px 16px rgba(0,0,0,0.08);
+  --shadow-dropdown: 0 8px 24px rgba(0,0,0,0.12);
+
+  /* Border radius */
+  --radius-btn:     6px;
+  --radius-input:   6px;
+  --radius-card:    10px;
+  --radius-badge:   4px;
+  --radius-status:  20px;
+  --radius-modal:   12px;
+  --radius-tooltip: 6px;
+}
+
+/* =====================================================
+   BACKGROUND DEPTH GRADIENT
+   ===================================================== */
+body {
+  background-image: radial-gradient(
+    ellipse 800px 600px at top right,
+    rgba(255, 255, 255, 0.03) 0%,
+    transparent 70%
+  );
+}
+
+/* =====================================================
+   CUSTOM SCROLLBAR
+   ===================================================== */
+::-webkit-scrollbar         { width: 6px; height: 6px; }
+::-webkit-scrollbar-track   { background: transparent; }
+::-webkit-scrollbar-thumb   { background: rgba(255,255,255,0.12); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(255,255,255,0.22); }
+
+/* =====================================================
+   FOCUS VISIBLE (WCAG AA)
+   ===================================================== */
+:focus-visible {
+  outline: 2px solid var(--color-ns-violet);
+  outline-offset: 3px;
+  border-radius: 3px;
+}
+
+/* =====================================================
+   ANIMATIONS — wrapped in prefers-reduced-motion
+   ===================================================== */
+@keyframes page-enter {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes scale-y-in {
+  from { transform: scaleY(0); }
+  to   { transform: scaleY(1); }
+}
+@keyframes slide-down-fade {
+  from { opacity: 0; transform: translateY(-6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes modal-enter {
+  from { opacity: 0; transform: scale(0.96); }
+  to   { opacity: 1; transform: scale(1); }
+}
+@keyframes modal-exit {
+  from { opacity: 1; transform: scale(1); }
+  to   { opacity: 0; transform: scale(0.96); }
+}
+@keyframes toast-enter {
+  from { transform: translateX(110%); opacity: 0; }
+  to   { transform: translateX(0);    opacity: 1; }
+}
+@keyframes toast-exit {
+  from { transform: translateX(0);    opacity: 1; }
+  to   { transform: translateX(110%); opacity: 0; }
+}
+@keyframes skeleton-shimmer {
+  0%   { background-position: -200% 0; }
+  100% { background-position:  200% 0; }
+}
+@keyframes tooltip-in {
+  from { opacity: 0; transform: translateY(4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes overlay-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Skeleton — always defined, only animated when motion is OK */
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    rgba(255,255,255,0.05) 25%,
+    rgba(255,255,255,0.10) 50%,
+    rgba(255,255,255,0.05) 75%
+  );
+  background-size: 200% 100%;
+  border-radius: var(--radius-card);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .skeleton {
+    animation: skeleton-shimmer 1.5s linear infinite;
+  }
+
+  .animate-page-enter {
+    animation: page-enter 250ms var(--ease-enter) both;
+  }
+
+  .animate-scale-y-in {
+    transform-origin: top;
+    animation: scale-y-in 200ms var(--ease-standard) both;
+  }
+
+  .animate-modal-enter {
+    animation: modal-enter 220ms var(--ease-enter) forwards;
+  }
+
+  .animate-overlay-in {
+    animation: overlay-in 200ms var(--ease-enter) forwards;
+  }
+
+  .animate-toast-enter {
+    animation: toast-enter 280ms var(--ease-enter) forwards;
+  }
+
+  .animate-toast-exit {
+    animation: toast-exit 220ms var(--ease-exit) forwards;
+  }
+
+  .animate-tooltip-in {
+    opacity: 0;
+    animation: tooltip-in 150ms var(--ease-enter) forwards;
+    animation-delay: 400ms;
+  }
+
+  .animate-slide-down-fade {
+    animation: slide-down-fade 200ms var(--ease-enter) both;
   }
 }
 
